@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="body">
-                                <p class="text-xl mb-0">Dr. Stein Albert</p>
+                                <p class="text-xl mb-0">Dr. Nicola</p>
                                 <span class="text-sm text-grey">Cardiology</span>
                             </div>
                         </div>
