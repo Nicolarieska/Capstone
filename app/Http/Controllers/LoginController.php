@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -16,26 +17,30 @@ class LoginController extends Controller
         ]);
     }
 
-    public function authenticate(Request $request)
+    protected function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            if (Auth::user()->verify === 0) {
-                Auth::logout();
-                return redirect('/notif')->with('loginError');
-            }
-            if (auth()->user()->role == 'admin')
-                return redirect()->intended('/dashboard');
-            else
-                return redirect()->intended('#');
+            return redirect('dashboard');
         }
 
-        return back()->with('loginError', 'Login Gagal!');
+        if (Auth::guard('web')->attempt($credentials)) {
+            $user = Auth::guard('web')->user();
+            if ($user->verify === 1) {
+                $request->session()->regenerate();
+                return redirect('pasien');
+            } else {
+                Auth::guard('web')->logout();
+                return redirect('notif');
+            }
+        }
+
+        return back()->with('loginError', 'Login Gagal! Anda Belum Registrasi');
     }
 
 

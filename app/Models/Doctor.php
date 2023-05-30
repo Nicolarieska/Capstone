@@ -5,18 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Poli extends Model
+class Doctor extends Model
 {
     use HasFactory;
 
-    protected $table = 'polis';
+    protected $table = 'doctors';
+    protected $guarded = ['id'];
     protected $fillable = [
         'name',
-        'photo'
+        'poli_id',
+        'photo',
     ];
 
-    public function doctor()
+    public function poli()
     {
-        return $this->hasMany('App\Models\Doctor', 'poli_id');
+        return $this->belongsTo('App\Models\Poli');
     }
 }

@@ -29,7 +29,6 @@ class User extends Authenticatable
         'phonenumber',
         'medicalrecords',
         'photo',
-        'role',
         'verify'
     ];
 

@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('phonenumber');
             $table->string('medicalrecords')->nullable();
             $table->string('photo')->nullable();
-            $table->enum('role', ['admin', 'user'])->default('user');
             $table->integer('verify')->default(0);
             $table->rememberToken();
             $table->timestamps();
