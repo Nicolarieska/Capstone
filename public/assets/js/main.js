@@ -36,6 +36,10 @@
                 required: true,
                 date: true
             },
+            gender: {
+                required: true,
+                maxlength: 15
+            },
             phonenumber: {
                 required: true,
                 minlength: 10,
@@ -78,6 +82,10 @@
             birth: {
                 required: "Please enter your Date of Birth",
                 date: "The date must be in the format YYYY-MM-DD",
+            },
+            gender: {
+                required: "Please enter your Gender",
+                maxlength: "Please enter no more than 15 characters"
             },
             phonenumber: {
                 required: "Please enter your Phone Number",

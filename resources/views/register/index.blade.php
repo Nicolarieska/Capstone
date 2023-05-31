@@ -4,8 +4,8 @@
 <div class="main">
 
     <div class="container">
-        <h2>Buat Akun Kamu</h2>
-        <p style="margin-top: 15px; text-align:center">Sudah punya akun? <a href="/login"><u>Sign in</u></a></p>
+        <h2>Register</h2>
+        <p style="margin-top: 15px; text-align:center">Sudah punya akun? <a href="/login"><u>Login</u></a></p>
         <form method="POST" action="{{ route('register.submit') }}" id="signup-form" class="signup-form" enctype="multipart/form-data">
             @csrf
             <h3>
@@ -15,12 +15,12 @@
             <fieldset>
                 <div class="form-row">
                     <div class="form-file">
-                        <input type="file" class="inputfile" name="your_picture" id="your_picture" onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />
+                        <input type="file" class="inputfile" name="photo" id="your_picture" onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />
                         <label for="your_picture">
                             <figure>
                                 <img src="{{asset('assets/images/your-picture.png')}}" alt="" class="your_picture_image">
                             </figure>
-                            <span class="file-button">choose picture</span>
+                            <span class="file-button">pilih foto profil</span>
                         </label>
                     </div>
                     <div class="form-group-flex">
@@ -53,20 +53,23 @@
                         <input type="text" name="place" id="place" placeholder="Tempat Lahir" />
                     </div>
                     <div class="form-input">
-                        <input type="date" name="birth" id="birth" placeholder="Tanggal Lahir" />
+                        <input placeholder="Tanggal Lahir" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.value == '' ? this.type='text' : this.type='date')" name="birth" id="birth">
                     </div>
                 </div>
 
                 <div class="form-row form-input-flex">
                     <div class="form-input">
-                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Nomor Telepon" />
+                        <input type="text" name="gender" id="gender" placeholder="Jenis Kelamin (Laki - Laki / Perempuan)"/>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Nomor Telepon"/>
                     </div>
                 </div>
 
             </fieldset>
 
             <h3>
-                Nomor Rekam Medik
+                Nomor Rekam Medis
             </h3>
             <fieldset>
                 <div class="form-row form-input-flex">

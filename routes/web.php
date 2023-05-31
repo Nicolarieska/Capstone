@@ -6,6 +6,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,10 +41,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth:admin');
 
 // Dashboard -> User
-Route::get('/pasien', [DashboardController::class, 'user'])->middleware('auth:admin');
-Route::get('/addpasien', [UserController::class, 'adduser'])->middleware('auth:admin');
-Route::get('/editpasien/{id}', [UserController::class, 'edituser'])->middleware('auth:admin');
-Route::put('/updatepasien/{id}', [UserController::class, 'updateuser'])->middleware('auth:admin');
-Route::get('/deletepasien/{id}', [UserController::class, 'delete'])->middleware('auth:admin');
-Route::get('/verify', [LoginController::class, 'verify'])->middleware('auth:admin');
-Route::get('/block', [LoginController::class, 'block'])->middleware('auth:admin');
+Route::get('/user', [DashboardController::class, 'user'])->middleware('auth:admin');
+Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->middleware('auth:admin');
+Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
+Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
+Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');

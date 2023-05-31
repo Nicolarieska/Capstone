@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('poli_id')->constrained('polis');
             $table->string('name');
+            $table->string('gender');
             $table->string('photo')->nullable();
             $table->timestamps();
         });

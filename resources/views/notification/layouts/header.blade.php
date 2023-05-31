@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="btn btn-primary ml-lg-3" href="/register">Login / Register</a>
+                        <a class="btn btn-primary ml-lg-3" href="/login">Login / Register</a>
                     </li>
                 </ul>
             </div> <!-- .navbar-collapse -->

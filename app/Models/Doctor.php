@@ -14,6 +14,7 @@ class Doctor extends Model
     protected $fillable = [
         'name',
         'poli_id',
+        'gender',
         'photo',
     ];
 

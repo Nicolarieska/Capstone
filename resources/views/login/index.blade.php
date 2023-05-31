@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="link-holder">
-                            Belum punya akun?<a href="/register"> Sign up</a>
+                            Belum punya akun?<a href="/register"> Register</a>
                         </div>
 
                     </div>
