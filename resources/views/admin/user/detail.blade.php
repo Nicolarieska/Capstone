@@ -36,7 +36,7 @@
                                 <div class="d-sm-flex mb-3">
                                     <div class="img-card mb-sm-0 mb-3">
                                         @if ($user->photo == null)
-
+                                        <img src="https://ui-avatars.com/api/?name={{ $user->name }}&length=1" alt="">
                                         @else
                                         <img src="{{ asset($user->photo) }}" alt="">
                                         @endif

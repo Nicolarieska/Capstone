@@ -16,11 +16,14 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        // Pindahkan file foto ke direktori publik
-        $photo = $request->file('photo');
-        $photoPath = $photo->move(public_path('photos'), $photo->getClientOriginalName())->getPathname();
+        $photoPath = null;
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $photoPath = $photo->move(public_path('photos'), $photo->getClientOriginalName())->getPathname();
+            $photoPath = 'photos/' . $photo->getClientOriginalName();
+        }
 
-        // Validasi request
+        // Buat dan simpan data pengguna
         $user = new User;
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
@@ -31,7 +34,7 @@ class RegisterController extends Controller
         $user->gender = $request->input('gender');
         $user->phonenumber = $request->input('phonenumber');
         $user->medicalrecords = $request->input('medicalrecords');
-        $user->photo = 'photos/' . $photo->getClientOriginalName();
+        $user->photo = $photoPath; // Tetapkan null atau path foto tergantung pada keberadaan file foto
         $user->save();
 
         return redirect('/notif')->with('success');
