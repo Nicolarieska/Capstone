@@ -20,7 +20,7 @@
             <div class="circle-shape bg-secondary text-white">
               <span class="mai-chatbubbles-outline"></span>
             </div>
-            <p><span>Chat</span> with a doctors</p>
+            <p><span>Konsultasi</span> dengan dokter</p>
           </div>
         </div>
         <div class="col-md-4 py-3 py-md-0">
@@ -28,7 +28,7 @@
             <div class="circle-shape bg-primary text-white">
               <span class="mai-shield-checkmark"></span>
             </div>
-            <p><span>One</span>-Health Protection</p>
+            <p><span>Perlindungan</span>Kesehatan</p>
           </div>
         </div>
         <div class="col-md-4 py-3 py-md-0">
@@ -36,7 +36,7 @@
             <div class="circle-shape bg-accent text-white">
               <span class="mai-basket"></span>
             </div>
-            <p><span>One</span>-Health Pharmacy</p>
+            <p><span>Apotek</span>Kesehatan</p>
           </div>
         </div>
       </div>
@@ -47,9 +47,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 py-3 wow fadeInUp">
-          <h1>Welcome to Your Health <br> Center</h1>
-          <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-          <a href="about.html" class="btn btn-primary">Learn More</a>
+          <h1>Selamat datang di Pusat Kesehatan <br> Anda</h1>
+          <p class="text-grey mb-4">Go Sakit adalah sebuah platform kesehatan yang menyediakan konsultasi dengan dokter dan informasi seputar gaya hidup sehat. Mereka memiliki tim dokter berpengalaman yang siap memberikan konsultasi akurat dan solusi tepat untuk setiap masalah kesehatan yang dihadapi. 
+              <br>
+              Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran dengan kehangatan dan profesionalisme. Selain itu, Go Sakit juga menyediakan artikel dan panduan tentang tips dan strategi untuk gaya hidup sehat. 
+              </p>
+          <a href="about.html" class="btn btn-primary">Selengkapnya</a>
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
           <div class="img-place custom-img-1">
@@ -70,7 +73,7 @@
         </div>
       </div>
       <div class="col-lg-8 wow fadeInRight">
-        <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
+        <h1 class="font-weight-normal mb-3">Dapatkan kemudahan akses semua fitur menggunakan Aplikasi Go Sakit</h1>
         <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
         <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
       </div>

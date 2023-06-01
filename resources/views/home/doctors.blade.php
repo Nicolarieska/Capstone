@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="body">
-                                <p class="text-xl mb-0">Dr. Alexa Melvin</p>
+                                <p class="text-xl mb-0">Dr. Jeremy</p>
                                 <span class="text-sm text-grey">Dental</span>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                             <div class="body">
-                                <p class="text-xl mb-0">Dr. Alexa Melvin</p>
+                                <p class="text-xl mb-0">Dr. Robert Dwayne</p>
                                 <span class="text-sm text-grey">Dental</span>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
 
 <div class="page-section">
     <div class="container">
-        <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
+        <h1 class="text-center wow fadeInUp">Membuat Janji</h1>
 
         <form class="main-form">
             <div class="row mt-5 ">
@@ -157,7 +157,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
+            <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Kirim Permintaan</button>
         </form>
     </div> <!-- .container -->
 </div> <!-- .page-section -->
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="col-lg-8 wow fadeInRight">
-                <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
+                <h1 class="font-weight-normal mb-3">Dapatkan kemudahan akses semua fitur menggunakan Aplikasi Go Sakit</h1>
                 <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
                 <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
             </div>
