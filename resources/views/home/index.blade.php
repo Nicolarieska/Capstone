@@ -20,7 +20,7 @@
             <div class="circle-shape bg-secondary text-white">
               <span class="mai-chatbubbles-outline"></span>
             </div>
-            <p><span>Konsultasi</span> dengan dokter</p>
+            <p>Konsultasi dengan dokter</p>
           </div>
         </div>
         <div class="col-md-4 py-3 py-md-0">
@@ -28,7 +28,7 @@
             <div class="circle-shape bg-primary text-white">
               <span class="mai-shield-checkmark"></span>
             </div>
-            <p><span>Perlindungan</span>Kesehatan</p>
+            <p>Perlindungan Kesehatan</p>
           </div>
         </div>
         <div class="col-md-4 py-3 py-md-0">
@@ -36,7 +36,7 @@
             <div class="circle-shape bg-accent text-white">
               <span class="mai-basket"></span>
             </div>
-            <p><span>Apotek</span>Kesehatan</p>
+            <p>Apotek Kesehatan</p>
           </div>
         </div>
       </div>

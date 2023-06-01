@@ -46,3 +46,7 @@ Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->midd
 Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
 Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
 Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');
+
+// User
+Route::get('/dokter', [UserController::class, 'dokter']);
+Route::get('/poli', [UserController::class, 'poli']);
