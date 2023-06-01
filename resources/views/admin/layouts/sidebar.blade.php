@@ -10,8 +10,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="/dashboard">Dashboard</a></li>
-                            <li><a href="/user">Patient</a></li>
-                            <li><a href="patient-details.html">Patient Details</a></li>
+                            <li><a href="/user">Data Pasien</a></li>
                             <li><a href="doctor.html">Doctors</a></li>
                             <li><a href="doctor-details.html">Doctor Details</a></li>
                             <li><a href="reviews.html">Reviews</a></li>

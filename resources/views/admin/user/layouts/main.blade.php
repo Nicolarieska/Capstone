@@ -77,24 +77,24 @@
     <script src="{{ asset('assets/js/custom.min.js') }}"></script>
     <script src="{{ asset('assets/js/deznav-init.js') }}"></script>
     <!-- Dashboard 1 -->
-	<script src="{{ asset('assets/js/dashboard/patient-details.js') }}"></script>
+    <script src="{{ asset('assets/js/dashboard/patient-details.js') }}"></script>
 
     <!-- Chart piety plugin files -->
     <script src="{{ asset('assets/vendor/peity/jquery.peity.min.js') }}"></script>
-	
-	<!-- Apex Chart -->
+
+    <!-- Apex Chart -->
     <script src="{{ asset('assets/vendor/apexchart/apexchart.js') }}"></script>
 
     <!-- Datatable -->
     <script src="{{ asset('assets/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-	
-	<!-- Chart piety plugin files -->
+
+    <!-- Chart piety plugin files -->
     <script src="./vendor/peity/jquery.peity.min.js"></script>
-	
-	<!-- Apex Chart -->
-	<script src="./vendor/apexchart/apexchart.js"></script>
-	<!-- Dashboard 1 -->
-	<script src="./js/dashboard/patient-details.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="./vendor/apexchart/apexchart.js"></script>
+    <!-- Dashboard 1 -->
+    <script src="./js/dashboard/patient-details.js"></script>
     <script>
         (function($) {
             var table = $('#example5').DataTable({
@@ -111,6 +111,7 @@
             });
         })(jQuery);
     </script>
+
 </body>
 
 </html>

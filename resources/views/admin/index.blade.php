@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="content-body">
+
     <!-- row -->
     <div class="container-fluid">
         <div class="form-head d-flex align-items-center mb-sm-4 mb-3">

@@ -59,10 +59,10 @@
 
                 <div class="form-row form-input-flex">
                     <div class="form-input">
-                        <input type="text" name="gender" id="gender" placeholder="Jenis Kelamin (Laki - Laki / Perempuan)"/>
+                        <input type="text" name="gender" id="gender" placeholder="Jenis Kelamin (Laki - Laki / Perempuan)" />
                     </div>
                     <div class="form-input">
-                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Nomor Telepon"/>
+                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Nomor Telepon" />
                     </div>
                 </div>
 
