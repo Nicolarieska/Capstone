@@ -16,7 +16,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect('/showuser')->with(['success' => 'User Berhasil Diverifikasi']);
+        return redirect('/user')->with(['success' => 'User Berhasil Diverifikasi']);
     }
 
     public function block(Request $request)
@@ -28,6 +28,13 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect('/showuser')->with(['success' => 'User Berhasil Diblock']);
+        return redirect('/user')->with(['success' => 'User Berhasil Diblock']);
+    }
+
+    public function deleteuser(Request $request)
+    {
+        User::destroy($request->id);
+        return redirect()->back()
+            ->with(['success' => 'Data User Berhasil Dihapus']);
     }
 }

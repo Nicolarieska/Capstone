@@ -6,6 +6,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,13 +38,11 @@ Route::post('/login/submit', [LoginController::class, 'authenticate'])->name('lo
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('checkRole:admin');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth:admin');
 
 // Dashboard -> User
-Route::get('/user', [DashboardController::class, 'user'])->middleware('checkRole:admin');
-Route::get('/adduser', [UserController::class, 'adduser'])->middleware('checkRole:admin');
-Route::get('/edituser/{id}', [UserController::class, 'edituser'])->middleware('checkRole:admin');
-Route::put('/updateuser/{id}', [UserController::class, 'updateuser'])->middleware('checkRole:admin');
-Route::get('/deleteuser/{id}', [UserController::class, 'delete'])->middleware('checkRole:admin');
-Route::get('/verify', [LoginController::class, 'verify'])->middleware('checkRole:admin');
-Route::get('/block', [LoginController::class, 'block'])->middleware('checkRole:admin');
+Route::get('/user', [DashboardController::class, 'user'])->middleware('auth:admin');
+Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->middleware('auth:admin');
+Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
+Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
+Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');

@@ -26,10 +26,10 @@ class User extends Authenticatable
         'name',
         'place',
         'birth',
+        'gender',
         'phonenumber',
         'medicalrecords',
         'photo',
-        'role',
         'verify'
     ];
 

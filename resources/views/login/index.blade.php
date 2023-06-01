@@ -1,9 +1,18 @@
 @extends('login.layouts.main')
 
 @section('content')
+
 <div class="main">
 
     <div class="container-form">
+
+        @if (session()->has('loginError'))
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('loginError') }}
+        </div>
+        @endif
+
         <form method="POST" action="{{ route('login.submit') }}" id="signup-form" class="signup-form" enctype="multipart/form-data">
             @csrf
             <h3 class="form-tittle">Login</h3>
@@ -27,7 +36,7 @@
                         </div>
 
                         <div class="link-holder">
-                            Belum punya akun?<a href="/register"> Sign up</a>
+                            Belum punya akun?<a href="/register"> Register</a>
                         </div>
 
                     </div>
