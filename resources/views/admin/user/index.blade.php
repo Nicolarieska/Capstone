@@ -40,6 +40,7 @@
                 <a href="index.html" class="btn btn-outline-primary"><i class="las la-calendar-plus scale5 mr-3"></i>Filter Date</a>
             </div>
         </div>
+
         <!-- Add Order -->
         <div class="modal fade" id="addOrderModal">
             <div class="modal-dialog" role="document">
@@ -75,6 +76,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-xl-12">
                 <div class="table-responsive card-table">
