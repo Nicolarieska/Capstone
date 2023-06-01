@@ -6,11 +6,11 @@
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                    <li class="breadcrumb-item"><a href="/home">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tentang Kami</li>
                 </ol>
             </nav>
-            <h1 class="font-weight-normal">About Us</h1>
+            <h1 class="font-weight-normal">Tentang Kami</h1>
         </div> <!-- .container -->
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->
@@ -23,7 +23,7 @@
                     <div class="circle-shape bg-secondary text-white">
                         <span class="mai-chatbubbles-outline"></span>
                     </div>
-                    <p><span>Chat</span> with a doctors</p>
+                    <p><span>Konsultasi</span> dengan dokter</p>
                 </div>
             </div>
             <div class="col-md-4 py-3 wow zoomIn">
@@ -31,7 +31,7 @@
                     <div class="circle-shape bg-primary text-white">
                         <span class="mai-shield-checkmark"></span>
                     </div>
-                    <p><span>One</span>-Health Protection</p>
+                    <p><span>Perlindungan</span>Kesehatan</p>
                 </div>
             </div>
             <div class="col-md-4 py-3 wow zoomIn">
@@ -39,7 +39,7 @@
                     <div class="circle-shape bg-accent text-white">
                         <span class="mai-basket"></span>
                     </div>
-                    <p><span>One</span>-Health Pharmacy</p>
+                    <p><span>Apotek</span>Kesehatan</p>
                 </div>
             </div>
         </div>
@@ -50,10 +50,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 wow fadeInUp">
-                <h1 class="text-center mb-3">Welcome</h1>
+                <h1 class="text-center mb-3">Selamat Datang Di Go Sakit</h1>
                 <div class="text-lg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure explicabo aut consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure explicabo aut consequuntur.</p>
-                    <p>Expedita iusto sunt beatae esse id nihil voluptates magni, excepturi distinctio impedit illo, incidunt iure facilis atque, inventore reprehenderit quidem aliquid recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod ad sequi atque accusamus deleniti placeat dignissimos illum nulla voluptatibus vel optio, molestiae dolore velit iste maxime, nobis odio molestias!</p>
+                    <p>Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.</p>
                 </div>
             </div>
         </div>
@@ -69,7 +68,7 @@
                 </div>
             </div>
             <div class="col-lg-8 wow fadeInRight">
-                <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
+                <h1 class="font-weight-normal mb-3">Dapatkan kemudahan akses semua fitur menggunakan Aplikasi Go Sakit</h1>
                 <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
                 <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
             </div>

@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/home">Home</a>
+                        <a class="nav-link" href="/home">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
+                        <a class="nav-link" href="/about">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/doctors">Doctors</a>
+                        <a class="nav-link" href="/doctors">Dokter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/contact">Kontak</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary ml-lg-3" href="/login">Login / Register</a>
