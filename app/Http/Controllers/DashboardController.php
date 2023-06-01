@@ -26,9 +26,7 @@ class DashboardController extends Controller
 
     public function userdetail($id)
     {
-        return view('admin.user.detail', [
-            'title' => 'User Detail',
-            'user' => User::find($id)
-        ]);
+        $user = User::findOrFail($id);
+        return view('admin.user.detail', ['user' => $user]);
     }
 }

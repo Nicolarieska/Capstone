@@ -18,7 +18,7 @@ class RegisterController extends Controller
     {
         // Pindahkan file foto ke direktori publik
         $photo = $request->file('photo');
-        $photoPath = $photo->move(public_path('photos'), $photo->getClientOriginalName())->getPath();
+        $photoPath = $photo->move(public_path('photos'), $photo->getClientOriginalName())->getPathname();
 
         // Validasi request
         $user = new User;
