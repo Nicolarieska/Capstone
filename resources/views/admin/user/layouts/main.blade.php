@@ -16,8 +16,13 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/datatables/css/jquery.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/animated/animate.min.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -89,12 +94,14 @@
     <script src="{{ asset('assets/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
 
     <!-- Chart piety plugin files -->
-    <script src="./vendor/peity/jquery.peity.min.js"></script>
+    <script src=" {{ asset('assets/vendor/peity/jquery.peity.min.js') }}"></script>
 
     <!-- Apex Chart -->
-    <script src="./vendor/apexchart/apexchart.js"></script>
+    <script src="{{ asset('assets/vendor/apexchart/apexchart.js') }}"></script>
+
     <!-- Dashboard 1 -->
-    <script src="./js/dashboard/patient-details.js"></script>
+    <script src="{{ asset('assets/js/dashboard/dashboard-1.js') }}"></script>
+
     <script>
         (function($) {
             var table = $('#example5').DataTable({
@@ -110,6 +117,14 @@
 
             });
         })(jQuery);
+    </script>
+
+    <!-- Js Whatsapp -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var template = "Hallo Sobat GoSakit\n\nKami dari GoSakit menginformasikan bahwa akun anda telah AKTIF dan anda memiliki nomor rekam medis dibawah ini:\n\nNomor Rekam Medis : \n\nJangan lupa untuk mengisi nomor rekam medis di bagian profil\n\nTerima kasih atas kepercayaan anda dan segera login untuk mendapatkan nomor antrian\n\nSalam, \nAdmin GoSakit";
+            document.getElementById('pesan').value = template;
+        });
     </script>
 
 </body>

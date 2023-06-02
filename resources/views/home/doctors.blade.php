@@ -6,11 +6,11 @@
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+                    <li class="breadcrumb-item"><a href="/home">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dokter</li>
                 </ol>
             </nav>
-            <h1 class="font-weight-normal">Our Doctors</h1>
+            <h1 class="font-weight-normal">Dokter Kami</h1>
         </div> <!-- .container -->
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->

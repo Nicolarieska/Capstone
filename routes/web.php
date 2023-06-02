@@ -44,6 +44,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/user', [DashboardController::class, 'user'])->middleware('auth:admin');
 Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->middleware('auth:admin');
 Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
+Route::post('/whatsapp/{id}', [NotificationController::class, 'store']);
 Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
 Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');
 

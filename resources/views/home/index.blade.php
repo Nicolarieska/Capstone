@@ -52,7 +52,7 @@
             <br>
             Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran dengan kehangatan dan profesionalisme. Selain itu, Go Sakit juga menyediakan artikel dan panduan tentang tips dan strategi untuk gaya hidup sehat.
           </p>
-          <a href="about.html" class="btn btn-primary">Selengkapnya</a>
+          <a href="/about" class="btn btn-primary">Selengkapnya</a>
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
           <div class="img-place custom-img-1">

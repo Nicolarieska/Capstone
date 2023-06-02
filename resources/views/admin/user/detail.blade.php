@@ -13,19 +13,41 @@
                 </ol>
             </div>
             <div class="d-flex">
-                <div class="dropdown mr-3">
-                    <a href="javascript:void(0)" class="btn btn-warning" data-toggle="dropdown" aria-expanded="false">
-                        In Treatment
-                        <i class="las la-angle-down ml-2 scale5"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="javascript:void(0);">Edit</a>
-                        <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                    </div>
-                </div>
-                <a href="app-profile.html" class="btn btn-outline-primary">Update Profile</a>
+                <a href="javascript:void(0)" class="btn btn-whatsapp" data-toggle="modal" data-target="#addOrderModal">
+                    Kirim Notifikasi
+                    <span class="btn-icon-right">
+                        <i class="fa fa-whatsapp"></i>
+                    </span>
+                </a>
             </div>
         </div>
+
+        <div class="modal fade" id="addOrderModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Contact</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/whatsapp/{{ $user->id }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="no_wa">No Whatsapp Pasien</label>
+                                <input type="text" name="no_wa" class="form-control" id="no_wa" value="{{ $user->phonenumber }}" placeholder="{{ $user->phonenumber }}" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="pesan">Pesan</label>
+                                <textarea name="pesan" class="form-control" id="pesan" cols="30" rows="5" placeholder="Pesan"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xl-9 col-xxl-12">
                 <div class="row">
@@ -67,7 +89,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <h4 class="fs-20 text-black font-w600">Story About Disease</h4>
+                                <h4 class="fs-20 text-black font-w600">Detail Tentang Pasien</h4>
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="card">

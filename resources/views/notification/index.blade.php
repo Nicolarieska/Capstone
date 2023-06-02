@@ -7,7 +7,7 @@
             <h1 class="display-4">MOHON MAAF</h1>
             <span class="subhead">Akun anda sedang dalam proses verifikasi</span>
             <br>
-            <span class="subhead">Ulangi login beberapa saat lagi</span>
+            <span class="subhead">Cek pesan whatsapp secara berkala untuk informasi lebih lanjut</span>
             <br> <br>
             <a href="/home" class="btn btn-primary">Home</a>
         </div>
