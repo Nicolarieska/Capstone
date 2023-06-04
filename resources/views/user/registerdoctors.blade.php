@@ -1,4 +1,4 @@
-@extends('user.layout.main')
+@extends('user.layouts.main')
 
 @section('content')
 <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
@@ -6,11 +6,11 @@
     <div class="container text-center wow fadeInUp">
       <nav aria-label="Breadcrumb">
         <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Pendaftaran</li>
+          <li class="breadcrumb-item"><a href="/homeuser">Beranda</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Dokter</li>
         </ol>
       </nav>
-      <h1 class="font-weight-normal">Poli Gigi</h1>
+      <h1 class="font-weight-normal">Daftar Dokter</h1>
     </div> <!-- .container -->
   </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->

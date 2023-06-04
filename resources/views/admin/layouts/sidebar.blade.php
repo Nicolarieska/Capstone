@@ -61,17 +61,11 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-heart"></i>
-                    <span class="nav-text">Plugins</span>
+                    <i class="flaticon-381-notebook"></i>
+                    <span class="nav-text">Data Poli</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="./uc-select2.html">Select 2</a></li>
-                    <li><a href="./uc-nestable.html">Nestedable</a></li>
-                    <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
-                    <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
-                    <li><a href="./uc-toastr.html">Toastr</a></li>
-                    <li><a href="./map-jqvmap.html">Jqv Map</a></li>
-                    <li><a href="./uc-lightgallery.html">Lightgallery</a></li>
+                    <li><a href="/polishow">Lihat Data Poli</a></li>
                 </ul>
             </li>
             <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">

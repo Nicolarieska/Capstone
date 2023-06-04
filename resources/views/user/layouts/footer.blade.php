@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-</div> <!-- .banner-home -->
+</div>
 
 
 <footer class="page-footer">
@@ -65,6 +65,6 @@
 
         <hr>
 
-        <p id="copyright">Copyright &copy; 2023 <a href="http://127.0.0.1:8000/home" target="_blank">GoSakit</a>. All right reserved</p>
+        <p id="copyright">Copyright &copy; 2023 <a href="#" target="_blank">GoSakit</a>. All right reserved</p>
     </div>
 </footer>

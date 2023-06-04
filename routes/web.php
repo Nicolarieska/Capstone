@@ -7,6 +7,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeUserController;
+use App\Http\Controllers\PoliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +50,16 @@ Route::post('/whatsapp/{id}', [NotificationController::class, 'store']);
 Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
 Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');
 
-// User
-Route::get('/dokter', [UserController::class, 'dokter']);
-Route::get('/poli', [UserController::class, 'poli']);
+// Dashboard -> Poli
+Route::get('/polishow', [PoliController::class, 'poli'])->middleware('auth:admin');
+Route::post('/polipost', [PoliController::class, 'store'])->name('polipost')->middleware('auth:admin');
+Route::put('/poliupdate/{id}', [PoliController::class, 'update'])->middleware('auth:admin');
+Route::get('/polidelete/{id}', [PoliController::class, 'delete'])->middleware('auth:admin');
+
+// Landing Page User
+Route::get('/homeuser', [HomeUserController::class, 'index'])->name('homeuser')->middleware('auth:web');
+Route::get('/aboutuser', [HomeUserController::class, 'about'])->middleware('auth:web');
+Route::get('/contactuser', [HomeUserController::class, 'contact'])->middleware('auth:web');
+Route::get('/registerpoli', [HomeUserController::class, 'registerpoli'])->middleware('auth:web');
+Route::get('/registerdoctors', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
+

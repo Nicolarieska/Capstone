@@ -7,20 +7,6 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function dokter()
-    {
-        return view('user.doctors', [
-            'title' => 'Dokter',
-        ]);
-    }
-    
-    public function poli()
-    {
-        return view('user.pendaftaran', [
-            'title' => 'Poli',
-        ]);
-    }
-
     public function verify(Request $request, User $user)
     {
 

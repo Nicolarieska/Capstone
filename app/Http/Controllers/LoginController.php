@@ -33,7 +33,7 @@ class LoginController extends Controller
             $user = Auth::guard('web')->user();
             if ($user->verify === 1) {
                 $request->session()->regenerate();
-                return redirect('pasien');
+                return redirect('homeuser');
             } else {
                 Auth::guard('web')->logout();
                 return redirect('notif');
@@ -46,7 +46,14 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        if (Auth::guard('admin')->check()) {
+            // Logout admin
+            Auth::guard('admin')->logout();
+        } else {
+            // Logout user
+            Auth::logout();
+        }
+
         $request->session()->invalidate();
         $request->session()->regenerate();
         return redirect('/login');

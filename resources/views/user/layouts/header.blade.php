@@ -35,22 +35,22 @@
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">Beranda</a>
+                        <a class="nav-link" href="/homeuser">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Tentang kami</a>
+                        <a class="nav-link" href="/aboutuser">Tentang kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/poli">Pendaftaran</a>
+                        <a class="nav-link" href="/registerpoli">Pendaftaran</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">kontak</a>
+                        <a class="nav-link" href="/contactuser">kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary ml-lg-3" href="/login">Login / Register</a>
+                        <!-- <a class="btn btn-primary ml-lg-3" href="/login">Login / Register</a> -->
                     </li>
                 </ul>
-            </div> <!-- .navbar-collapse -->
-        </div> <!-- .container -->
+            </div>
+        </div>
     </nav>
 </header>
