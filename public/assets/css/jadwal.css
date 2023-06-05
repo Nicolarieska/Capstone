@@ -1,0 +1,61 @@
+@import url(./pendaftaran.css);
+
+.container-biodata {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    margin: 20px 80px;
+    border: 1px black solid;
+}
+
+.detail-thumb {
+    width: 80%;
+    height: 30em;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.doctor-poli {
+    font-size: 1.4em;
+}
+
+.detail-content {
+    padding-top: 20px;
+}
+
+.detail-content .items {
+    display: flex;
+    gap: 20px;
+}
+
+.detail-content .items div {
+    margin-top: 10px;
+    display: flex;
+    align-self: center;
+    gap: 5px;
+    font-size: 0.8em;
+    color: var(--black);
+    background-color: #e4e4e4;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.detail-content .items div p {
+    margin-bottom: 0;
+}
+
+.detail-desc {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    margin: 20px 80px;
+    border: 1px black solid;
+}
