@@ -52,10 +52,7 @@
             <div class="col-lg-8 wow fadeInUp">
                 <h1 class="text-center mb-3">Selamat Datang Di Go Sakit</h1>
                 <div class="text-lg">
-                    <p class="text-grey mb-4 about-text">Go Sakit adalah sebuah platform kesehatan yang menyediakan konsultasi dengan dokter dan informasi seputar gaya hidup sehat. Mereka memiliki tim dokter berpengalaman yang siap memberikan konsultasi akurat dan solusi tepat untuk setiap masalah kesehatan yang dihadapi.
-                    <br><br>
-                    Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran dengan kehangatan dan profesionalisme. Selain itu, Go Sakit juga menyediakan artikel dan panduan tentang tips dan strategi untuk gaya hidup sehat.
-                    </p>
+                    <p>Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.</p>
                 </div>
             </div>
         </div>

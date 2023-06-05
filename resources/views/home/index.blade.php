@@ -1,8 +1,6 @@
 @extends('home.layouts.main')
 
 @section('content')
-
-<!-- Hero section -->
 <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
   <div class="hero-section">
     <div class="container text-center wow zoomIn">
@@ -13,7 +11,6 @@
   </div>
 </div>
 
-<!-- card box -->
 <div class="bg-light">
   <div class="page-section py-3 mt-md-n5 custom-index">
     <div class="container">
@@ -50,18 +47,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 py-3 wow fadeInUp">
-<<<<<<< Updated upstream
           <h1>Selamat datang di Pusat Kesehatan <br> Anda</h1>
           <p class="text-grey mb-4">Go Sakit adalah sebuah platform kesehatan yang menyediakan konsultasi dengan dokter dan informasi seputar gaya hidup sehat. Mereka memiliki tim dokter berpengalaman yang siap memberikan konsultasi akurat dan solusi tepat untuk setiap masalah kesehatan yang dihadapi. 
               <br>
               Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran dengan kehangatan dan profesionalisme. Selain itu, Go Sakit juga menyediakan artikel dan panduan tentang tips dan strategi untuk gaya hidup sehat. 
               </p>
           <a href="about.html" class="btn btn-primary">Selengkapnya</a>
-=======
-          <h1>Selamat datang di Pusat Kesehatan Anda</h1>
-          <p>Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.</p>
-          <a href="/about" class="btn btn-primary">Selengkapnya</a>
->>>>>>> Stashed changes
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
           <div class="img-place custom-img-1">

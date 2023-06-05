@@ -46,21 +46,3 @@ Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->midd
 Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
 Route::get('/verify', [UserController::class, 'verify'])->middleware('auth:admin');
 Route::get('/block', [UserController::class, 'block'])->middleware('auth:admin');
-<<<<<<< Updated upstream
-=======
-
-// Dashboard -> Poli
-Route::get('/polishow', [PoliController::class, 'poli'])->middleware('auth:admin');
-Route::post('/polipost', [PoliController::class, 'store'])->name('polipost')->middleware('auth:admin');
-Route::put('/poliupdate/{id}', [PoliController::class, 'update'])->middleware('auth:admin');
-Route::get('/polidelete/{id}', [PoliController::class, 'delete'])->middleware('auth:admin');
-
-// Landing Page User
-Route::get('/homeuser', [HomeUserController::class, 'index'])->name('homeuser')->middleware('auth:web');
-Route::get('/aboutuser', [HomeUserController::class, 'about'])->middleware('auth:web');
-Route::get('/contactuser', [HomeUserController::class, 'contact'])->middleware('auth:web');
-Route::get('/registerpoli', [HomeUserController::class, 'registerpoli'])->middleware('auth:web');
-Route::get('/registerdoctors', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
-Route::get('/jadwal', [HomeUserController::class, 'jadwal'])->middleware('auth:web');
-
->>>>>>> Stashed changes
