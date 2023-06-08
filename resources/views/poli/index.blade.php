@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <div class="form-head align-items-center d-flex mb-sm-4 mb-3">
             <div class="mr-auto">
-                <h2 class="text-black font-w600">Data Poli GoSakit</h2>
+                <h2 class="text-black font-w600">DATA POLI GOSAKIT</h2>
                 <p class="mb-0">Halaman Untuk Kelola Data Poli</p>
             </div>
             <div>

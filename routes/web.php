@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeUserController;
 use App\Http\Controllers\PoliController;
+use App\Http\Controllers\DoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth:admin');
 
-// Dashboard -> User
+// Dashboard -> User (Pasien)
 Route::get('/user', [DashboardController::class, 'user'])->middleware('auth:admin');
 Route::put('/medicalrecords/{id}', [UserController::class, 'medicalrecords'])->middleware('auth:admin');
 Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->middleware('auth:admin');
@@ -63,4 +64,8 @@ Route::get('/aboutuser', [HomeUserController::class, 'about'])->middleware('auth
 Route::get('/contactuser', [HomeUserController::class, 'contact'])->middleware('auth:web');
 Route::get('/registerpoli', [HomeUserController::class, 'registerpoli'])->middleware('auth:web');
 Route::get('/registerdoctors', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
+
+// Dashboard -> Dokter
+Route::get('/doctor', [DoctorController::class, 'doctor'])->middleware('auth:admin');
+Route::post('/doctorpost', [DoctorController::class, 'store'])->name('doctorpost')->middleware('auth:admin');
 
