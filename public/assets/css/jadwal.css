@@ -1,0 +1,123 @@
+@import url(./pendaftaran.css);
+
+.container-biodata {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    margin: 20px 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.detail-thumb {
+    width: 30%;
+    height: 20em;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+main {
+    background-color: #f5f9f6;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-block: 40px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.subtitle-text {
+    margin-bottom: 38px;
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.doctor-poli {
+    font-size: 1.2em;
+    color: var(--cs);
+}
+
+.detail-content .items {
+    display: flex;
+    gap: 20px;
+}
+
+.list-detail-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.desc-title {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+p.desc {
+    font-size: 1em;
+}
+
+.detail-content .items div {
+    margin-top: 10px;
+    display: flex;
+    align-self: center;
+    gap: 5px;
+    font-size: 0.8em;
+    color: var(--black);
+    background-color: #e4e4e4;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.detail-content .items div p {
+    margin-bottom: 0;
+}
+
+.detail-desc {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.subtitle-jadwal {
+    margin-block: 40px;
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    margin: 0 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.hari {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.tanggal {
+    color: var(--black);
+    font-size: 0.9em;
+}
+
+.jadwal-btn {
+    background: none;
+    border: none;
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: var(--lGreen);
+}
