@@ -37,4 +37,18 @@ class UserController extends Controller
         return redirect()->back()
             ->with(['delete' => 'Data Pasien Berhasil Dihapus']);
     }
+
+    public function medicalrecords(Request $request, $id)
+    {
+        $user = User::findorfail($id);
+        $medicalrecords = $user->medicalrecords;
+
+        $data = [
+            'medicalrecords' => $request['medicalrecords'],
+        ];
+
+        $user->update($data);
+        return redirect('/user')->with('update', 'Nomor Rekam Medis Pengguna Telah Ditambahkan');
+    }
+
 }

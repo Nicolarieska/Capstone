@@ -22,6 +22,32 @@
             </div>
         </div>
 
+        <!-- Add Order -->
+        <div class="modal fade" id="medicalrecords">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Tambah Rekam Medis Pasien</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/medicalrecords/{{ $user->id }}" method="POST" enctype="multipart/form-data">
+                            @method("put")
+                            @csrf
+                            <div class="form-group">
+                                <label class="text-black font-w500">Rekam Medis Pasien</label>
+                                <input type="text" class="form-control text-black" name="medicalrecords" id="medicalrecords" />
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal fade" id="addOrderModal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -119,6 +145,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
+
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="card">
                                             <div class="card-body">
@@ -126,12 +153,22 @@
                                                     <i class="las la-stethoscope fs-30 text-primary mr-3"></i>
                                                     <div class="media-body">
                                                         <span class="d-block mb-1">Nomor Rekam Medis</span>
+                                                        @if($user->medicalrecords)
                                                         <p class="fs-18 mb-0 text-black">{{ $user->medicalrecords }}</p>
+                                                        @else
+                                                        <p class="fs-18 mb-0 text-black">-</p>
+                                                        @endif
                                                     </div>
+                                                    @if(!$user->medicalrecords)
+                                                    <div class="ml-auto">
+                                                        <a href="javascript:void(0)" class="flaticon-381-add-2 fs-30" data-toggle="modal" data-target="#medicalrecords"></a>
+                                                    </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="card">
                                             <div class="card-body">

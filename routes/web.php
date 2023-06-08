@@ -44,6 +44,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Dashboard -> User
 Route::get('/user', [DashboardController::class, 'user'])->middleware('auth:admin');
+Route::put('/medicalrecords/{id}', [UserController::class, 'medicalrecords'])->middleware('auth:admin');
 Route::get('/userdetail/{id}', [DashboardController::class, 'userdetail'])->middleware('auth:admin');
 Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser')->middleware('auth:admin');
 Route::post('/whatsapp/{id}', [NotificationController::class, 'store']);

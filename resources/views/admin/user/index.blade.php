@@ -3,6 +3,18 @@
 @section('content')
 <div class="content-body">
 
+    @if (session()->has('update'))
+    <div class="alert alert-success solid alert-dismissible fade show">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+        </svg>
+        <strong>Success!</strong> {{ session('update') }}
+        <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+        </button>
+    </div>
+    @endif
+
     @if (session()->has('delete'))
     <div class="alert alert-danger solid alert-dismissible fade show">
         <svg viewBox="0 0 24 24" width="24 " height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
@@ -51,42 +63,6 @@
             <div>
                 <a href="javascript:void(0)" class="btn btn-primary mr-3" data-toggle="modal" data-target="#addOrderModal">+ New Patient</a>
                 <a href="index.html" class="btn btn-outline-primary"><i class="las la-calendar-plus scale5 mr-3"></i>Filter Date</a>
-            </div>
-        </div>
-
-        <!-- Add Order -->
-        <div class="modal fade" id="addOrderModal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add Contact</h5>
-                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Patient Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Patient ID</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Disease</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Date Check In</label>
-                                <input type="date" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-primary">CREATE</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
 
