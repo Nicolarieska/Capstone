@@ -94,9 +94,6 @@ p.desc {
 }
 
 .time-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
     padding: 50px;
     margin: 0 80px;
     background-color: #fff;
@@ -112,6 +109,12 @@ p.desc {
 .tanggal {
     color: var(--black);
     font-size: 0.9em;
+}
+
+.anu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .jadwal-btn {

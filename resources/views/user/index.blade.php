@@ -48,11 +48,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
                     <h1>Selamat datang di Pusat Kesehatan <br> Anda</h1>
-                    <p class="text-grey mb-4">Go Sakit adalah sebuah platform kesehatan yang menyediakan konsultasi dengan dokter dan informasi seputar gaya hidup sehat. Mereka memiliki tim dokter berpengalaman yang siap memberikan konsultasi akurat dan solusi tepat untuk setiap masalah kesehatan yang dihadapi.
-                        <br>
-                        Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran dengan kehangatan dan profesionalisme. Selain itu, Go Sakit juga menyediakan artikel dan panduan tentang tips dan strategi untuk gaya hidup sehat.
+                    <p class="about">Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.
                     </p>
-                    <a href="/about" class="btn btn-primary">Selengkapnya</a>
+                    <a href="/aboutuser" class="btn btn-primary">Selengkapnya</a>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
                     <div class="img-place custom-img-1">

@@ -20,7 +20,7 @@
 
 <div class="page-section bg-light">
 
-  <div class="title-container">
+  <div class="title-container wow zoomIn">
     <h1 class="page-title">Daftar Poli Kami</h1>
   </div>
 

@@ -17,11 +17,11 @@
 
 <main>
     <section>
-    <div class="subtitle">
+    <div class="subtitle wow zoomIn">
         <h1 class="subtitle-text" tabindex="0">Biodata Dokter</h1>
     </div>
 
-    <div class="container-biodata">
+    <div class="container-biodata wow zoomIn">
         <img class="detail-thumb" src="../assets/img/doctors/doctor_1.jpg" alt="">
         <div class="detail-content">
             <h1 tabindex="0" class="list-detail-title" id="doctor-name">Dr. Stein Albert</h1>
@@ -53,22 +53,59 @@
         </div>
     </div>
 
-    <div class="subtitle">
+    <div class="subtitle wow zoomIn">
         <h1 class="subtitle-jadwal" tabindex="0">Pilih Waktu Kunjungan</h1>
     </div>
 
-    <div class="time-container">
-        <div class="button-container">
-            <button class="jadwal-btn">
-                <div class="hari">
-                    Senin
-                </div>
-                <div class="tanggal">
-                    5 Juni
-                </div>
-            </button>
+    <div class="time-container wow zoomIn">
+        <div class="button-container-ini">
+            <div class="anu">
+                <button class="jadwal-btn">
+                    <div class="hari">
+                        Senin
+                    </div>
+                    <div class="tanggal">
+                        5 Juni
+                    </div>
+                </button>
+                
+                <button class="jadwal-btn">
+                    <div class="hari">
+                        Senin
+                    </div>
+                    <div class="tanggal">
+                        5 Juni
+                    </div>
+                </button>
+
+                <button class="jadwal-btn">
+                    <div class="hari">
+                        Senin
+                    </div>
+                    <div class="tanggal">
+                        5 Juni
+                    </div>
+                </button>
+
+                <button class="jadwal-btn">
+                    <div class="hari">
+                        Senin
+                    </div>
+                    <div class="tanggal">
+                        5 Juni
+                    </div>
+                </button>
+
+                <button class="jadwal-btn">
+                    <div class="hari">
+                        Senin
+                    </div>
+                    <div class="tanggal">
+                        5 Juni
+                    </div>
+                </button>
+            </div>
         </div>
-    </div>
     </section>
 </main>
 @endsection

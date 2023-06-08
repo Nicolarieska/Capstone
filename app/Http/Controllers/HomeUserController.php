@@ -43,4 +43,11 @@ class HomeUserController extends Controller
             'title' => 'ContactUser',
         ]);
     }
+
+    public function jadwal()
+    {
+        return view('user.jadwal', [
+            'title' => 'JadwalDokter',
+        ]);
+    }
 }

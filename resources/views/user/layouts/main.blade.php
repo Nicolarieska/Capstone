@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/animate/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/doctor.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jadwal.css') }}">
 
 </head>
 
