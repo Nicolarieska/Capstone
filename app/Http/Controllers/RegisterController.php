@@ -19,8 +19,8 @@ class RegisterController extends Controller
         $photoPath = null;
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
-            $photoPath = $photo->move(public_path('photos'), $photo->getClientOriginalName())->getPathname();
-            $photoPath = 'photos/' . $photo->getClientOriginalName();
+            $photoPath = $photo->move(public_path('pasien'), $photo->getClientOriginalName())->getPathname();
+            $photoPath = 'pasien/' . $photo->getClientOriginalName();
         }
 
         // Buat dan simpan data pengguna

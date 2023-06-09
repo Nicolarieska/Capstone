@@ -67,6 +67,6 @@ Route::get('/registerdoctors', [HomeUserController::class, 'registerdoctors'])->
 Route::get('/jadwal', [HomeUserController::class, 'jadwal'])->middleware('auth:web');
 
 // Dashboard -> Dokter
-Route::get('/doctor', [DoctorController::class, 'doctor'])->middleware('auth:admin');
+Route::get('/doctorshow', [DoctorController::class, 'doctor'])->middleware('auth:admin');
 Route::post('/doctorpost', [DoctorController::class, 'store'])->name('doctorpost')->middleware('auth:admin');
-
+Route::get('/doctordetail/{id}', [DoctorController::class, 'doctordetail'])->middleware('auth:admin');

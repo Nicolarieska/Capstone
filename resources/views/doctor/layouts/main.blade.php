@@ -23,6 +23,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 </head>
 
 <body>
@@ -119,11 +122,34 @@
         })(jQuery);
     </script>
 
-    <!-- Js Whatsapp -->
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var template = "Hallo Sobat GoSakit\n\nKami dari GoSakit menginformasikan bahwa akun anda telah AKTIF dan anda memiliki nomor rekam medis dibawah ini:\n\nNomor Rekam Medis : \n\nJangan lupa untuk mengisi nomor rekam medis di bagian profil\n\nTerima kasih atas kepercayaan anda dan segera login untuk mendapatkan nomor antrian\n\nSalam, \nAdmin GoSakit";
-            document.getElementById('pesan').value = template;
+        function previewImage(event) {
+            var input = event.target;
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var image = document.getElementById("preview_image");
+                image.src = e.target.result;
+                image.style.width = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.height = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.objectFit = "cover";
+                image.style.borderRadius = "50%";
+            };
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.image-popup').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
         });
     </script>
 
