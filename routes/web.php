@@ -69,4 +69,5 @@ Route::get('/jadwal', [HomeUserController::class, 'jadwal'])->middleware('auth:w
 // Dashboard -> Dokter
 Route::get('/doctorshow', [DoctorController::class, 'doctor'])->middleware('auth:admin');
 Route::post('/doctorpost', [DoctorController::class, 'store'])->name('doctorpost')->middleware('auth:admin');
-Route::get('/doctordetail/{id}', [DoctorController::class, 'doctordetail'])->middleware('auth:admin');
+Route::put('/doctorupdate/{id}', [DoctorController::class, 'update'])->middleware('auth:admin');
+Route::get('/doctordelete/{id}', [DoctorController::class, 'delete'])->middleware('auth:admin');

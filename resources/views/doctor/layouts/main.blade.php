@@ -23,9 +23,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
 </head>
 
 <body>
@@ -123,6 +120,26 @@
     </script>
 
     <script>
+        function previewEdit(event) {
+            var input = event.target;
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var image = document.getElementById("preview_edit");
+                image.src = e.target.result;
+                image.style.width = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.height = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.objectFit = "cover";
+                image.style.borderRadius = "50%";
+            };
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
         function previewImage(event) {
             var input = event.target;
             var reader = new FileReader();
@@ -143,14 +160,33 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-            $('.image-popup').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
+        function showModal(imageSrc) {
+            var modal = document.getElementById('modal');
+            var modalContent = document.getElementById('modal-content');
+            var modalImage = document.getElementById('modal-image');
+
+            modalImage.src = imageSrc;
+            modalImage.onload = function() {
+                var imageWidth = modalImage.width;
+                var imageHeight = modalImage.height;
+
+                modal.style.display = 'block';
+                modalContent.style.width = imageWidth + 'px';
+                modalContent.style.height = imageHeight + 'px';
+
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        hideModal();
+                    }
+                });
+            };
+        }
+
+        function hideModal() {
+            var modal = document.getElementById('modal');
+
+            modal.style.display = 'none';
+        }
     </script>
 
 </body>

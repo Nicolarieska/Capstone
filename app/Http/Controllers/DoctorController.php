@@ -48,4 +48,36 @@ class DoctorController extends Controller
 
         return redirect('/doctorshow')->with('add', 'Data Dokter Berhasil Ditambahkan');
     }
+
+    public function update(Request $request, $id)
+    {
+        $update = Doctor::findorfail($id);
+        $doctor = $update->photo;
+
+        $data = [
+            'name' => $request['name'],
+            'gender' => $request['gender'],
+            'poli_id' => $request['poli_id'],
+            'photo' => $doctor,
+        ];
+
+        $request->photo->move(public_path() . '/doctor', $doctor);
+        $update->update($data);
+        return redirect('/doctorshow')->with('update', 'Data Dokter Berhasil Diedit');
+    }
+
+    public function delete($id)
+    {
+        $delete = Doctor::findorfail($id);
+
+        $file = public_path('doctor/' . $delete->photo);
+
+        if (file_exists($file)) {
+            @unlink($file);
+        }
+
+        $delete->delete();
+
+        return redirect('/doctorshow')->with('delete', 'Data Dokter Berhasil Dihapus');
+    }
 }

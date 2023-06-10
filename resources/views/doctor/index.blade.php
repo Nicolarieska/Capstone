@@ -15,6 +15,31 @@
     </div>
     @endif
 
+    @if (session()->has('update'))
+    <div class="alert alert-warning solid alert-dismissible fade show">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+        </svg>
+        <strong>Update!</strong> {{ session('update') }}
+        <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+        </button>
+    </div>
+    @endif
+
+
+    @if (session()->has('delete'))
+    <div class="alert alert-danger solid alert-dismissible fade show">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+        </svg>
+        <strong>Delete!</strong> {{ session('delete') }}
+        <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+        </button>
+    </div>
+    @endif
+
     <!-- row -->
     <div class="container-fluid">
         <div class="form-head d-flex mb-sm-4 mb-3">
@@ -117,56 +142,127 @@
                         <thead>
                             <tr>
                                 <th class="text-center">ID Dokter</th>
+                                <th class="text-center" width="200px">Foto</th>
                                 <th class="text-center" width="200px">Nama</th>
                                 <th class="text-center" width="200px">Jenis Kelamin</th>
-                                <th class="text-center" width="200px">Foto</th>
                                 <th class="text-center" width="200px">Poli</th>
                                 <th class="text-center" width="200px">Action</th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($doctor as $d)
                             <tr class="text-center">
                                 <td>{{ $d->id }}</td>
-                                <td>{{ $d->name }}</td>
-                                <td>{{ $d->gender }}</td>
                                 <td>
-                                    <a href="{{ asset($d->photo) }}" class="image-popup">
+                                    <a href="#" onclick="showModal('{{ asset($d->photo) }}'); return false;">
                                         <img src="{{ asset($d->photo) }}" alt="Doctor Photo" width="100" height="100">
                                     </a>
-                                    <div class="mfp-hide">
-                                        <div class="popup-content">
-                                            <img src="{{ asset($d->photo) }}" alt="Doctor Photo" width="500" height="500">
-                                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                                    <div id="modal" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.5);">
+                                        <div id="modal-content" style="display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative; margin: auto; padding: 20px; background-color: #fff;">
+                                            <img id="modal-image" src="" alt="Doctor Photo">
+                                            <button onclick="hideModal();" style="position: absolute; top: 10px; right: 10px; border: none; background-color: transparent; font-size: 20px; color: #000; cursor: pointer;" title="Close (Esc)" type="button" class="close-button">×</button>
                                         </div>
                                     </div>
                                 </td>
-
-
+                                <td>{{ $d->name }}</td>
+                                <td>{{ $d->gender }}</td>
                                 <td>{{ $d->poli->name }}</td>
                                 <td>
-                                    <a href="javascript:void(0)" class="btn btn-outline-dark text-nowrap btn-sm">No Schedule</a>
-                                </td>
-                                <td><span class="text-nowrap">+12 4122 4556</span></td>
-                                <td><span class="text-dark">Unavailable</span></td>
-                                <td>
-                                    <div class="dropdown ml-auto text-right">
-                                        <div class="btn-link" data-toggle="dropdown">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11Z" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18Z" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4Z" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#">View Detail</a>
-                                            <a class="dropdown-item" href="#">Edit</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="/doctorupdate/{{ $d->id }}" class="btn btn-rounded btn-warning" style="margin-bottom: 10px; margin-right: 10px;" data-toggle="modal" data-target="#edit-{{ $d->id }}">Edit</a>
+                                        <a href="/doctordelete/{{ $d->id }}" class="btn btn-rounded btn-danger" style="margin-bottom: 10px;">Delete</a>
                                     </div>
                                 </td>
                             </tr>
+
+                            <div class="modal fade" id="edit-{{ $d->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Data Dokter</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="container-fluid">
+
+                                                <form method="POST" action="/doctorupdate/{{ $d->id }}" enctype="multipart/form-data">
+                                                    @method("put")
+                                                    @csrf
+                                                    <div class="form-file" style="display: flex; align-items: center;">
+                                                        <label for="your_picture" style="margin-right: 10px;">
+                                                            <figure>
+                                                                <img id="preview_edit" src="{{asset('assets/images/your-picture.png')}}" alt="" class="your_picture_image">
+                                                            </figure>
+                                                        </label>
+                                                        <div style="display: flex; flex-direction: column;">
+                                                            <span class="file-button" onclick="chooseFile()" style="margin-bottom: 5px;">Pilih Foto Dokter</span>
+                                                            <input type="file" class="inputfile" name="photo" id="your_picture" onchange="previewEdit(event);" data-multiple-caption="{count} files selected" multiple>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Nama Dokter</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Nama" value="{{ old('name') }}" />
+
+                                                            @error('name')
+                                                            <div class="invalid-feedback">
+                                                                {{ $message }}
+                                                            </div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                                        <div class="col-sm-9">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="gender" id="laki-laki" value="Laki-laki">
+                                                                <label class="form-check-label" for="laki-laki">Laki-Laki</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="gender" id="perempuan" value="Perempuan">
+                                                                <label class="form-check-label" for="perempuan">Perempuan</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Poli</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" name="poli_id" id="poli_id" @if($poli->isEmpty()) disabled @endif>
+                                                                @if($poli->isEmpty())
+                                                                <option disabled selected>Tidak Ada Data Poli</option>
+                                                                @else
+                                                                @foreach ($poli as $p)
+                                                                <option value="{{ $p->id }}">{{ $p->name }}</option>
+                                                                @endforeach
+                                                                @endif
+                                                            </select>
+                                                            @if($errors->has('poli_id'))
+                                                            <div class="invalid-feedback">
+                                                                {{ $errors->first('poli_id') }}
+                                                            </div>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-9 offset-sm-3">
+                                                            <button type="submit" class="btn btn-primary float-right">Submit</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             @endforeach
                         </tbody>
                     </table>
