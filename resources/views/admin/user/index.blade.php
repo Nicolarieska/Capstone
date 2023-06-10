@@ -60,10 +60,6 @@
                 <h2 class="text-black font-w600">DATA PASIEN</h2>
                 <p class="mb-0">Halaman Untuk Kelola Data Pasien</p>
             </div>
-            <div>
-                <a href="javascript:void(0)" class="btn btn-primary mr-3" data-toggle="modal" data-target="#addOrderModal">+ New Patient</a>
-                <a href="index.html" class="btn btn-outline-primary"><i class="las la-calendar-plus scale5 mr-3"></i>Filter Date</a>
-            </div>
         </div>
 
         <div class="row">
@@ -112,7 +108,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-center">
-                                        <a href="/deleteuser/{{ $u->id }}" class="btn btn-rounded btn-danger">Delete</a>
+                                        <a href="/deleteuser/{{ $u->id }}" class="btn btn-danger shadow btn-md sharp"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                                 <td>

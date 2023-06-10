@@ -119,8 +119,8 @@
                             </div>
 
                             <div class="d-flex justify-content-center mt-3">
-                                <button type="button" class="btn-rounded btn-warning btn-xl mr-3" data-toggle="modal" data-target="#edit-{{ $p->id }}">Edit</button>
-                                <a href="/polidelete/{{ $p->id }}" class="btn-rounded btn-danger btn-xl">Delete</a>
+                                <a href="#" class="btn btn-primary shadow btn-md sharp mr-1" data-toggle="modal" data-target="#edit-{{ $p->id }}"><i class="fa fa-pencil"></i></a>
+                                <a href="/polidelete/{{ $p->id }}" class="btn btn-danger shadow btn-md sharp"><i class="fa fa-trash"></i></a>
                             </div>
 
                         </div>

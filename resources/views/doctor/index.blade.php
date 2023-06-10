@@ -49,7 +49,6 @@
             </div>
             <div>
                 <a href="javascript:void(0)" class="btn btn-primary mr-3" data-toggle="modal" data-target="#addOrderModal">+ Tambah Dokter</a>
-                <a href="index.html" class="btn btn-outline-primary"><i class="las la-calendar-plus scale5 mr-3"></i>Filter Date</a>
             </div>
         </div>
 
@@ -169,8 +168,8 @@
                                 <td>{{ $d->poli->name }}</td>
                                 <td>
                                     <div class="d-flex justify-content-center">
-                                        <a href="/doctorupdate/{{ $d->id }}" class="btn btn-rounded btn-warning" style="margin-bottom: 10px; margin-right: 10px;" data-toggle="modal" data-target="#edit-{{ $d->id }}">Edit</a>
-                                        <a href="/doctordelete/{{ $d->id }}" class="btn btn-rounded btn-danger" style="margin-bottom: 10px;">Delete</a>
+                                        <a href="/doctorupdate/{{ $d->id }}" class="btn btn-primary shadow btn-md sharp mr-1" data-toggle="modal" data-target="#edit-{{ $d->id }}"><i class="fa fa-pencil"></i></a>
+                                        <a href="/doctordelete/{{ $d->id }}" class="btn btn-danger shadow btn-md sharp"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>

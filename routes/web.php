@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeUserController;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\AdminController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +73,9 @@ Route::get('/doctorshow', [DoctorController::class, 'doctor'])->middleware('auth
 Route::post('/doctorpost', [DoctorController::class, 'store'])->name('doctorpost')->middleware('auth:admin');
 Route::put('/doctorupdate/{id}', [DoctorController::class, 'update'])->middleware('auth:admin');
 Route::get('/doctordelete/{id}', [DoctorController::class, 'delete'])->middleware('auth:admin');
+
+// Dashboard -> Admin
+Route::get('/adminshow', [DashboardController::class, 'admin'])->middleware('auth:admin');
+Route::post('/adminpost', [AdminController::class, 'store'])->name('adminpost')->middleware('auth:admin');
+Route::put('/adminupdate/{id}', [AdminController::class, 'update'])->middleware('auth:admin');
+Route::get('/admindelete/{id}', [AdminController::class, 'delete'])->middleware('auth:admin');
