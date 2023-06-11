@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Poli;
+use App\Models\Doctor;
 
 class HomeUserController extends Controller
 {
@@ -30,10 +31,13 @@ class HomeUserController extends Controller
         ]);
     }
 
-    public function registerdoctors()
+    public function registerdoctors($id)
     {
+        $doctor = Doctor::where('poli_id', $id)->get();
         return view('user.registerdoctors', [
             'title' => 'RegisterDoctors',
+            'doctor' => $doctor,
+            'poli' => DB::table('polis')->get()
         ]);
     }
 

@@ -27,7 +27,7 @@
   <div class="card-poli-container">
 
     @foreach($poli as $p)
-    <a href="/registerdoctors" class="wow zoomIn">
+    <a href="/registerdoctors/{{ $p->id }}" class="wow zoomIn">
       <div class="card-poli">
         <div class="header">
           <img src="{{ asset($p->photo) }}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" alt="Gambar Poli">
@@ -37,7 +37,6 @@
         <p class="text-xl mb-0">{{ $p->name }}</p>
       </div>
     </a>
-
     @endforeach
 
   </div>

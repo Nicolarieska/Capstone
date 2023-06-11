@@ -25,24 +25,29 @@
   <div class="doctor-container-out">
 
     <div class="doctor-container">
-
+      @foreach ($doctor as $d)
       <a href="/jadwal">
         <div class="wow zoomIn">
           <div class="card-doctor">
             <div class="header">
-              <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+              <img src="{{ asset($d->photo) }}" alt="">
             </div>
             <div class="body">
               <div class="text">
-                <p class="text-xl mb-0">Dr. Stein Albert</p>
-                <span class="text-sm text-grey">Poli Gigi</span>
+                <p class="text-xl mb-0">{{ $d->name }}</p>
+
+                @foreach ($poli as $p)
+                @if ($p->id == $d->poli_id)
+                <span class="text-sm text-grey">{{ $p->name }}</span>
+                @endif
+                @endforeach
 
                 <div class="items">
                   <div class="rating">
-                    &#9733; <p>84%</p>
+                    &#9733; <p>{{ $d->gender }}</p>
                   </div>
                   <div class="exp">
-                    &#128195; <p>35 Tahun</p>
+                    &#128195; <p>Magang</p>
                   </div>
                 </div>
 
@@ -59,7 +64,7 @@
           </div>
         </div>
       </a>
-
+      @endforeach
     </div>
 
   </div>

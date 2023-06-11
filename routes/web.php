@@ -65,7 +65,7 @@ Route::get('/homeuser', [HomeUserController::class, 'index'])->name('homeuser')-
 Route::get('/aboutuser', [HomeUserController::class, 'about'])->middleware('auth:web');
 Route::get('/contactuser', [HomeUserController::class, 'contact'])->middleware('auth:web');
 Route::get('/registerpoli', [HomeUserController::class, 'registerpoli'])->middleware('auth:web');
-Route::get('/registerdoctors', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
+Route::get('/registerdoctors/{id}', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
 Route::get('/jadwal', [HomeUserController::class, 'jadwal'])->middleware('auth:web');
 
 // Dashboard -> Dokter
