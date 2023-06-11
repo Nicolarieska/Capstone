@@ -119,12 +119,74 @@
         })(jQuery);
     </script>
 
-    <!-- Js Whatsapp -->
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var template = "Hallo Sobat GoSakit\n\nKami dari GoSakit menginformasikan bahwa akun anda telah AKTIF dan anda memiliki nomor rekam medis dibawah ini:\n\nNomor Rekam Medis : \n\nJangan lupa untuk mengisi nomor rekam medis di bagian profil\n\nTerima kasih atas kepercayaan anda dan segera login untuk mendapatkan nomor antrian\n\nSalam, \nAdmin GoSakit";
-            document.getElementById('pesan').value = template;
-        });
+        function previewEdit(event) {
+            var input = event.target;
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var image = document.getElementById("preview_edit");
+                image.src = e.target.result;
+                image.style.width = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.height = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.objectFit = "cover";
+                image.style.borderRadius = "50%";
+            };
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        function previewImage(event) {
+            var input = event.target;
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var image = document.getElementById("preview_image");
+                image.src = e.target.result;
+                image.style.width = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.height = "200px"; // Sesuaikan dengan ukuran yang diinginkan
+                image.style.objectFit = "cover";
+                image.style.borderRadius = "50%";
+            };
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        function showModal(imageSrc) {
+            var modal = document.getElementById('modal');
+            var modalContent = document.getElementById('modal-content');
+            var modalImage = document.getElementById('modal-image');
+
+            modalImage.src = imageSrc;
+            modalImage.onload = function() {
+                var imageWidth = modalImage.width;
+                var imageHeight = modalImage.height;
+
+                modal.style.display = 'block';
+                modalContent.style.width = imageWidth + 'px';
+                modalContent.style.height = imageHeight + 'px';
+
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        hideModal();
+                    }
+                });
+            };
+        }
+
+        function hideModal() {
+            var modal = document.getElementById('modal');
+
+            modal.style.display = 'none';
+        }
     </script>
 
 </body>

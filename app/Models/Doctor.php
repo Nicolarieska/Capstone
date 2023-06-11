@@ -20,6 +20,6 @@ class Doctor extends Model
 
     public function poli()
     {
-        return $this->belongsTo('App\Models\Poli');
+        return $this->belongsTo('App\Models\Poli', 'poli_id');
     }
 }
