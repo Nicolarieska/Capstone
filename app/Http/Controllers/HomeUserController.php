@@ -48,10 +48,13 @@ class HomeUserController extends Controller
         ]);
     }
 
-    public function jadwal()
+    public function jadwal($id)
     {
+        $doctor = Doctor::findorfail($id);
         return view('user.jadwal', [
             'title' => 'JadwalDokter',
+            'doctor' => $doctor,
+            'poli' => DB::table('polis')->get()
         ]);
     }
 }

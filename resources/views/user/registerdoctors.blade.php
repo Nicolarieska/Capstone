@@ -26,7 +26,7 @@
 
     <div class="doctor-container">
       @foreach ($doctor as $d)
-      <a href="/jadwal">
+      <a href="/jadwal/{{ $d->id }}">
         <div class="wow zoomIn">
           <div class="card-doctor">
             <div class="header">
