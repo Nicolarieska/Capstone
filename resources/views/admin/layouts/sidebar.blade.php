@@ -38,14 +38,9 @@
                     <li><a href="/polishow">Lihat Data Poli</a></li>
                 </ul>
             </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-2"></i>
-                    <span class="nav-text">Widget</span>
-                </a>
-            </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-notepad"></i>
-                    <span class="nav-text">Forms</span>
+                    <span class="nav-text">Data Jadwal</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="./form-element.html">Form Elements</a></li>

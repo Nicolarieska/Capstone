@@ -79,3 +79,9 @@ Route::get('/adminshow', [DashboardController::class, 'admin'])->middleware('aut
 Route::post('/adminpost', [AdminController::class, 'store'])->name('adminpost')->middleware('auth:admin');
 Route::put('/adminupdate/{id}', [AdminController::class, 'update'])->middleware('auth:admin');
 Route::get('/admindelete/{id}', [AdminController::class, 'delete'])->middleware('auth:admin');
+
+// Dashboard -> Admin
+Route::get('/scheduleshow', [DashboardController::class, 'admin'])->middleware('auth:admin');
+Route::post('/schedulepost', [AdminController::class, 'store'])->name('adminpost')->middleware('auth:admin');
+Route::put('/scheduleupdate/{id}', [AdminController::class, 'update'])->middleware('auth:admin');
+Route::get('/scheduledelete/{id}', [AdminController::class, 'delete'])->middleware('auth:admin');
