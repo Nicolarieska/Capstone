@@ -38,17 +38,9 @@
             </div>
             <div class="detail-desc">
                 <h3 tabindex="0" class="desc-title">Description:</h3>
-                <p tabindex="0" id="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-                    enim.
-                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-                    imperdiet
-                    a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                    dapibus.
-                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                    consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-                    Phasellus viverra nulla ut metus varius laoreet.</p>
+                <p tabindex="0" id="desc">dr. Ackni Hartati, Sp.A, M.Kes adalah Dokter Spesialis Anak yang aktif melayani pasien di RS Permata Bekasi, RS EMC Pekayon, dan Primaya Hospital Bekasi Timur. dr. Ackni Hartati, Sp.A, M.Kes mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Padjadjaran. 
+                Beliau tergabung dalam Ikatan Dokter Anak Indonesia (IDAI) dan Ikatan Dokter Indonesia (IDI) dapat memberikan layanan konsultasi seputar tumbuh dan kembang anak.
+                Harga yang tertera merupakan biaya konsultasi dokter, belum termasuk tindakan lain dan biaya admin dari RS/Klinik (apabila ada).</p>
             </div>
         </div>
     </div>
@@ -57,55 +49,132 @@
         <h1 class="subtitle-jadwal" tabindex="0">Pilih Waktu Kunjungan</h1>
     </div>
 
-    <div class="time-container wow zoomIn">
-        <div class="button-container-ini">
-            <div class="anu">
-                <button class="jadwal-btn">
-                    <div class="hari">
-                        Senin
-                    </div>
-                    <div class="tanggal">
-                        5 Juni
-                    </div>
-                </button>
-                
-                <button class="jadwal-btn">
-                    <div class="hari">
-                        Senin
-                    </div>
-                    <div class="tanggal">
-                        5 Juni
-                    </div>
-                </button>
+    <form action="">    
 
-                <button class="jadwal-btn">
-                    <div class="hari">
-                        Senin
-                    </div>
-                    <div class="tanggal">
-                        5 Juni
-                    </div>
-                </button>
+        <div class="button-container-ini wow zoomIn">
+            <div class="radio-container">
+                <div class="radio-item">
+                    <input type="radio" id="day-1" name="tanggal" value="5 Juni 2023" checked="checked">
+                    <label class="btn-labl" for="day-1">
+                        <div class="jadwal-btn">
+                            <div class="hari">
+                                Senin
+                            </div>
+                            <div class="tanggal">
+                                5 Juni
+                            </div>
+                        </div>
+                    </label>
+                </div>
 
-                <button class="jadwal-btn">
-                    <div class="hari">
-                        Senin
-                    </div>
-                    <div class="tanggal">
-                        5 Juni
-                    </div>
-                </button>
+                <div class="radio-item">
+                    <input type="radio" id="day-2" name="tanggal" value="6 Juni 2023">
+                    <label class="btn-labl" for="day-2">
+                        <div class="jadwal-btn">
+                            <div class="hari">
+                                Selasa
+                            </div>
+                            <div class="tanggal">
+                                6 Juni
+                            </div>
+                        </div>
+                    </label>
+                </div>
 
-                <button class="jadwal-btn">
-                    <div class="hari">
-                        Senin
-                    </div>
-                    <div class="tanggal">
-                        5 Juni
-                    </div>
-                </button>
+                <div class="radio-item">
+                    <input type="radio" id="day-3" name="tanggal" value="7 Juni 2023">
+                    <label class="btn-labl" for="day-3">
+                        <div class="jadwal-btn">
+                            <div class="hari">
+                                Rabu
+                            </div>
+                            <div class="tanggal">
+                                7 Juni
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-item">
+                    <input type="radio" id="day-4" name="tanggal" value="8 Juni 2023">
+                    <label class="btn-labl" for="day-4">
+                        <div class="jadwal-btn">
+                            <div class="hari">
+                                Kamis
+                            </div>
+                            <div class="tanggal">
+                                8 Juni
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-item">
+                    <input type="radio" id="day-5" name="tanggal" value="9 Juni 2023">
+                    <label class="btn-labl" for="day-5">
+                        <div class="jadwal-btn">
+                            <div class="hari">
+                                Jumat
+                            </div>
+                            <div class="tanggal">
+                                9 Juni
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
+
+        <div class="time-container">
+            <div class="accordion">
+                Pagi
+                <div>+</div>
+            </div>
+            <div class="clock-cont">
+                <input type="radio" id="07.00" name="jam" value="07.00">
+                <label class="btn-labl clock-item" for="07.00">07.00</label>
+                
+                <input type="radio" id="09.00" name="jam" value="09.00">
+                <label class="btn-labl clock-item" for="09.00">09.00</label>
+            </div>
+
+            <div class="accordion">
+                Siang
+                <div>+</div>
+            </div>
+            <div class="clock-cont">
+                <input type="radio" id="11.00" name="jam" value="11.00">
+                <label class="btn-labl clock-item" for="11.00">11.00</label>
+                
+                <input type="radio" id="13.00" name="jam" value="13.00">
+                <label class="btn-labl clock-item" for="13.00">13.00</label>
+            </div>
+
+            <div class="accordion">
+                Sore
+                <div>+</div>
+            </div>
+            <div class="clock-cont">
+                <input type="radio" id="15.00" name="jam" value="15.00">
+                <label class="btn-labl clock-item" for="15.00">15.00</label>
+                
+                <input type="radio" id="17.00" name="jam" value="17.00">
+                <label class="btn-labl clock-item" for="17.00">17.00</label>
+            </div>
+        </div>
+    
+
+        <footer>
+            <div class="submit-container">
+                <div class="wrap">
+                    <div>
+                        <h5 class="confirm-text">(Hari, Tanggal, Waktu)</h5>
+                    </div>
+                    <input type="submit" class="submit-btn not-allowed-cursor" value="Buat Janji">
+                </div>
+            </div>
+        </footer>
+    </form>
     </section>
 </main>
 @endsection

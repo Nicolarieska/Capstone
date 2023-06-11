@@ -41,6 +41,7 @@
     <script src="{{ asset('assets/vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/js/theme.js') }}"></script>
+    <script src="{{ asset('assets/js/mine.js') }}"></script>
 
 </body>
 

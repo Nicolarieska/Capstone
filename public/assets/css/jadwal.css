@@ -13,7 +13,7 @@
 
 .detail-thumb {
     width: 30%;
-    height: 20em;
+    height: 25em;
     object-position: center;
     object-fit: cover;
     border-radius: 10px;
@@ -94,10 +94,7 @@ p.desc {
 }
 
 .time-container {
-    padding: 50px;
     margin: 0 80px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
 
@@ -111,16 +108,133 @@ p.desc {
     font-size: 0.9em;
 }
 
-.anu {
+.radio-container {
+    margin: 0 80px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
 }
 
-.jadwal-btn {
+.radio-item > input + label {
+    cursor: pointer;
+    text-align: center;
     background: none;
     border: none;
     padding: 5px 25px;
     border-radius: 10px;
-    background-color: var(--lGreen);
+    background-color: #c3c3c3;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-labl:hover {
+    background-color: #adadad;
+}
+
+.radio-item input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.radio-item > input:checked + label {
+    background-color: #daffe8;
+    border: 1px var(--dGreen) solid;
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    padding-right: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--black);
+    background-color: #fff;
+    transition: all 0.15s ease-in-out;
+}
+
+.activee,
+.accordion:hover {
+    background-color: #daffe8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.clock-cont {
+    margin-block: 10px;
+    padding: 0 25px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease-in-out;
+}
+
+.clock-item {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    border: 1px var(--cs) solid;
+    color: var(--black);
+    transition: all 0.15s ease-in-out;
+}
+
+.clock-item:hover {
+    text-decoration: none;
+    background-color: #c3c3c3;
+    color: var(--black);
+}
+
+.clock-cont label {
+    margin-block: 10px;
+}
+.clock-cont input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.clock-cont > input:checked + .clock-item {
+    background-color: #daffe8;
+    border: 1px var(--dGreen) solid;
+}
+
+.submit-container {
+    margin: 20px 80px;
+}
+
+.wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrap h5 {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.submit-btn {
+    background-color: var(--dGreen);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    transition: all 0.15s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #006222;
+}
+
+.disabled {
+    background-color: #c3c3c3;
+    color: var(--black);
+    pointer-events: none;
+}
+
+.not-allowed-cursor {
+    cursor: not-allowed;
 }
