@@ -63,8 +63,8 @@
                 <div class="radio-container">
                     @foreach ($jadwal as $j)
                     <div class="radio-item">
-                        <input type="radio" id="day-1" name="tanggal" value="Senin, 5 Juni 2023" checked="checked">
-                        <label class="btn-labl" for="day-1">
+                        <input type="radio" id="day-{{ $j->id }}" name="tanggal" value="{{ $j->day.','.$j->date }}" >
+                        <label class="btn-labl" for="day-{{ $j->id }}">
                             <div class="jadwal-btn">
                                 <div class="hari">
                                     {{ $j->day }}
