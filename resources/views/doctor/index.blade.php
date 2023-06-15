@@ -106,6 +106,7 @@
                                 <label class="col-sm-3 col-form-label">Poli</label>
                                 <div class="col-sm-9">
                                     <select class="form-control" name="poli_id" id="poli_id" @if($poli->isEmpty()) disabled @endif>
+                                        <option selected>Pilih Poli</option>
                                         @if($poli->isEmpty())
                                         <option disabled selected>Tidak Ada Data Poli</option>
                                         @else
@@ -233,6 +234,7 @@
                                                         <label class="col-sm-3 col-form-label">Poli</label>
                                                         <div class="col-sm-9">
                                                             <select class="form-control" name="poli_id" id="poli_id" @if($poli->isEmpty()) disabled @endif>
+                                                                <option selected>Pilih Poli</option>
                                                                 @if($poli->isEmpty())
                                                                 <option disabled selected>Tidak Ada Data Poli</option>
                                                                 @else

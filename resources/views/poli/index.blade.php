@@ -106,6 +106,11 @@
         </div>
 
         <div class="row">
+            @if($poli->isEmpty())
+            <div class="col-12 text-center">
+                <p>Data Poli Belum Ditambahkan</p>
+            </div>
+            @else
             @foreach($poli as $p)
             <div class="col-xl-3 col-xxl-4 col-lg-6 col-md-6 col-sm-6">
                 <div class="card">
@@ -180,6 +185,7 @@
                 </div>
             </div>
             @endforeach
+            @endif
         </div>
     </div>
 </div>

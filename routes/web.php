@@ -11,7 +11,7 @@ use App\Http\Controllers\HomeUserController;
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\AdminController;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,8 +81,10 @@ Route::post('/adminpost', [AdminController::class, 'store'])->name('adminpost')-
 Route::put('/adminupdate/{id}', [AdminController::class, 'update'])->middleware('auth:admin');
 Route::get('/admindelete/{id}', [AdminController::class, 'delete'])->middleware('auth:admin');
 
-// Dashboard -> Admin
-Route::get('/scheduleshow', [DashboardController::class, 'admin'])->middleware('auth:admin');
-Route::post('/schedulepost', [AdminController::class, 'store'])->name('adminpost')->middleware('auth:admin');
-Route::put('/scheduleupdate/{id}', [AdminController::class, 'update'])->middleware('auth:admin');
-Route::get('/scheduledelete/{id}', [AdminController::class, 'delete'])->middleware('auth:admin');
+// Dashboard -> Jadwal
+Route::get('/indexpoli', [ScheduleController::class, 'indexpoli'])->middleware('auth:admin');
+Route::get('/scheduleshow', [ScheduleController::class, 'scheduleshow'])->middleware('auth:admin');
+Route::get('/indexdoctor/{id}', [ScheduleController::class, 'indexdoctor'])->middleware('auth:admin');
+Route::get('/scheduleform/{id}', [ScheduleController::class, 'scheduleform'])->middleware('auth:admin');
+Route::post('/schedulepost', [ScheduleController::class, 'store'])->name('schedulepost')->middleware('auth:admin');
+

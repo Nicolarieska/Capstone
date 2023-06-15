@@ -1,5 +1,5 @@
 <div class="nav-header">
-    <a href="index.html" class="brand-logo">
+    <a href="/dashboard" class="brand-logo">
         <img class="logo-abbr" src="{{asset('assets/images/logo2.png')}} " alt="">
         <span class="text-primary" style="font-size: 30px;">Go Sakit</span>
     </a>

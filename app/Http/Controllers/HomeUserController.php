@@ -51,6 +51,8 @@ class HomeUserController extends Controller
     public function jadwal($id)
     {
         $doctor = Doctor::findorfail($id);
+        $jadwal = $doctor->schedules->first()->schedule;
+        return dd($jadwal);
         return view('user.jadwal', [
             'title' => 'JadwalDokter',
             'doctor' => $doctor,

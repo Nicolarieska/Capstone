@@ -11,15 +11,14 @@ class Doctor extends Model
 
     protected $table = 'doctors';
     protected $guarded = ['id'];
-    protected $fillable = [
-        'name',
-        'poli_id',
-        'gender',
-        'photo',
-    ];
 
     public function poli()
     {
-        return $this->belongsTo('App\Models\Poli', 'poli_id');
+        return $this->belongsTo(Poli::class, 'poli_id');
+    }
+
+    public function schedules()
+    {
+        return $this->hasMany(DoctorSchedule::class, 'doctor_id');
     }
 }
