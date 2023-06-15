@@ -21,142 +21,88 @@
 
 <main>
     <section>
-            <div class="subtitle wow zoomIn">
-                <h1 class="subtitle-text" tabindex="0">Biodata Dokter</h1>
-            </div>
+        <div class="subtitle wow zoomIn">
+            <h1 class="subtitle-text" tabindex="0">Biodata Dokter</h1>
+        </div>
 
-            <div class="container-biodata wow zoomIn">
-                <img class="detail-thumb" src="{{ asset($doctor->photo) }}" alt="">
-                <div class="detail-content">
-                    <h1 tabindex="0" class="list-detail-title" id="doctor-name">{{ $doctor->name }}</h1>
-                    <div class="detail-container-subtitel">
+        <div class="container-biodata wow zoomIn">
+            <img class="detail-thumb" src="{{ asset($doctor->photo) }}" alt="">
+            <div class="detail-content">
+                <h1 tabindex="0" class="list-detail-title" id="doctor-name">{{ $doctor->name }}</h1>
+                <div class="detail-container-subtitel">
                     @foreach ($poli as $p)
                     @if ($p->id == $doctor->poli_id)
-                        <h3 tabindex="0" class="doctor-poli" id="doctor-poli">{{ $p->name }}</h3>
+                    <h3 tabindex="0" class="doctor-poli" id="doctor-poli">{{ $p->name }}</h3>
                     @endif
                     @endforeach
-                        <div class="items">
-                            <div class="rating">
-                                &#9733; <p id="rating">{{ $doctor->gender }}</p>
+                    <div class="items">
+                        <div class="rating">
+                            &#9733; <p id="rating">{{ $doctor->gender }}</p>
+                        </div>
+                        <div class="exp">
+                            &#128195; <p id="exp">Magang</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-desc">
+                    <h3 tabindex="0" class="desc-title">Description:</h3>
+                    <p tabindex="0" id="desc">dr. Ackni Hartati, Sp.A, M.Kes adalah Dokter Spesialis Anak yang aktif melayani pasien di RS Permata Bekasi, RS EMC Pekayon, dan Primaya Hospital Bekasi Timur. dr. Ackni Hartati, Sp.A, M.Kes mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Padjadjaran.
+                        Beliau tergabung dalam Ikatan Dokter Anak Indonesia (IDAI) dan Ikatan Dokter Indonesia (IDI) dapat memberikan layanan konsultasi seputar tumbuh dan kembang anak.
+                        Harga yang tertera merupakan biaya konsultasi dokter, belum termasuk tindakan lain dan biaya admin dari RS/Klinik (apabila ada).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subtitle wow zoomIn">
+            <h1 class="subtitle-jadwal" tabindex="0">Pilih Waktu Kunjungan</h1>
+        </div>
+
+        <form action="" id="date" method="post">
+
+            <div class="button-container-ini wow fadeInRight">
+                <div class="radio-container">
+                    @foreach ($jadwal as $j)
+                    <div class="radio-item">
+                        <input type="radio" id="day-1" name="tanggal" value="Senin, 5 Juni 2023" checked="checked">
+                        <label class="btn-labl" for="day-1">
+                            <div class="jadwal-btn">
+                                <div class="hari">
+                                    {{ $j->day }}
+                                </div>
+                                <div class="tanggal">
+                                    {{ $j->date }}
+                                </div>
                             </div>
-                            <div class="exp">
-                                &#128195; <p id="exp">Magang</p>
-                        </div>
-                        </div>
+                        </label>
                     </div>
-                        <div class="detail-desc">
-                        <h3 tabindex="0" class="desc-title">Description:</h3>
-                        <p tabindex="0" id="desc">dr. Ackni Hartati, Sp.A, M.Kes adalah Dokter Spesialis Anak yang aktif melayani pasien di RS Permata Bekasi, RS EMC Pekayon, dan Primaya Hospital Bekasi Timur. dr. Ackni Hartati, Sp.A, M.Kes mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Padjadjaran.
-                            Beliau tergabung dalam Ikatan Dokter Anak Indonesia (IDAI) dan Ikatan Dokter Indonesia (IDI) dapat memberikan layanan konsultasi seputar tumbuh dan kembang anak.
-                            Harga yang tertera merupakan biaya konsultasi dokter, belum termasuk tindakan lain dan biaya admin dari RS/Klinik (apabila ada).</p>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
-            <div class="subtitle wow zoomIn">
-                <h1 class="subtitle-jadwal" tabindex="0">Pilih Waktu Kunjungan</h1>
-            </div>
+            <div class="time-container wow fadeInLeft">
+                <div class="accordion">
+                    Pagi
+                    <div>+</div>
+                </div>
+                <div class="clock-cont">
+                    <input type="radio" id="07.00" name="jam" value="07.00">
+                    <label class="btn-labl clock-item" for="07.00">07.00</label>
 
-            <form action="" id="date" method="post">
-
-                <div class="button-container-ini wow fadeInRight">
-                    <div class="radio-container">
-                        <div class="radio-item">
-                            <input type="radio" id="day-1" name="tanggal" value="Senin, 5 Juni 2023" checked="checked">
-                            <label class="btn-labl" for="day-1">
-                                <div class="jadwal-btn">
-                                    <div class="hari">
-                                        Senin
-                                    </div>
-                                    <div class="tanggal">
-                                        5 Juni
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="radio-item">
-                            <input type="radio" id="day-2" name="tanggal" value="Selasa, 6 Juni 2023">
-                            <label class="btn-labl" for="day-2">
-                                <div class="jadwal-btn">
-                                    <div class="hari">
-                                        Selasa
-                                    </div>
-                                    <div class="tanggal">
-                                        6 Juni
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="radio-item">
-                            <input type="radio" id="day-3" name="tanggal" value="Rabu, 7 Juni 2023">
-                            <label class="btn-labl" for="day-3">
-                                <div class="jadwal-btn">
-                                    <div class="hari">
-                                        Rabu
-                                    </div>
-                                    <div class="tanggal">
-                                        7 Juni
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="radio-item">
-                            <input type="radio" id="day-4" name="tanggal" value="Kamis, 8 Juni 2023">
-                            <label class="btn-labl" for="day-4">
-                                <div class="jadwal-btn">
-                                    <div class="hari">
-                                        Kamis
-                                    </div>
-                                    <div class="tanggal">
-                                        8 Juni
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="radio-item">
-                            <input type="radio" id="day-5" name="tanggal" value="Jumat, 9 Juni 2023">
-                            <label class="btn-labl" for="day-5">
-                                <div class="jadwal-btn">
-                                    <div class="hari">
-                                        Jumat
-                                    </div>
-                                    <div class="tanggal">
-                                        9 Juni
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
+                    <input type="radio" id="09.00" name="jam" value="09.00">
+                    <label class="btn-labl clock-item" for="09.00">09.00</label>
                 </div>
 
-                <div class="time-container wow fadeInLeft">
-                    <div class="accordion">
-                        Pagi
-                        <div>+</div>
-                    </div>
-                    <div class="clock-cont">
-                        <input type="radio" id="07.00" name="jam" value="07.00">
-                        <label class="btn-labl clock-item" for="07.00">07.00</label>
-    
-                        <input type="radio" id="09.00" name="jam" value="09.00">
-                        <label class="btn-labl clock-item" for="09.00">09.00</label>
-                    </div>
+                <div class="accordion">
+                    Siang
+                    <div>+</div>
+                </div>
+                <div class="clock-cont">
+                    <input type="radio" id="11.00" name="jam" value="11.00">
+                    <label class="btn-labl clock-item" for="11.00">11.00</label>
 
-                    <div class="accordion">
-                        Siang
-                        <div>+</div>
-                    </div>
-                    <div class="clock-cont">
-                        <input type="radio" id="11.00" name="jam" value="11.00">
-                        <label class="btn-labl clock-item" for="11.00">11.00</label>
-    
-                        <input type="radio" id="13.00" name="jam" value="13.00">
-                        <label class="btn-labl clock-item" for="13.00">13.00</label>
-                    </div>
+                    <input type="radio" id="13.00" name="jam" value="13.00">
+                    <label class="btn-labl clock-item" for="13.00">13.00</label>
+                </div>
 
                 <div class="accordion">
                     Sore
@@ -172,20 +118,20 @@
             </div>
 
 
-                <div class="submit-container">
-                    <div class="wrap">
-                        <div>
+            <div class="submit-container">
+                <div class="wrap">
+                    <div>
                         <h5 class="confirm-text">Isi Tanggal dan Waktu Terlebih Dahulu</h5>
-                        </div>
-                        <div class="submit-btn disabled" type="submit">Konfirmasi</div>
                     </div>
+                    <div class="submit-btn disabled" type="submit">Konfirmasi</div>
                 </div>
-            
+            </div>
 
-                <!-- Modal View  -->
+
+            <!-- Modal View  -->
             <div class="modal-container" id="modal-1">
                 <div class="container-konfirmasi-big">
-                    
+
                     <div class="subtitle">
                         <h1 class="modal-title" tabindex="0">Konfirmasi Janji</h1>
                     </div>
@@ -199,7 +145,7 @@
                                 @if ($p->id == $doctor->poli_id)
                                 <h3 tabindex="0" class="konfirmasi-poli">{{ $p->name }}</h3>
                                 @endif
-                                @endforeach               
+                                @endforeach
                             </div>
 
                             <div class="detail-desc">
@@ -214,19 +160,19 @@
                     </div>
 
                 </div>
-            </div> 
+            </div>
 
             <!-- Modal View 2  -->
             <div class="modal-container" id="modal-2">
                 <div class="container-konfirmasi-big">
-                    
+
                     <div class="subtitle">
                         <h1 class="modal-title" tabindex="0">Konfirmasi Janji</h1>
                     </div>
 
                     <div class="container-konfirmasi">
                         <div class="animation-cont">
-                            <lottie-player class="animation" src="https://assets3.lottiefiles.com/packages/lf20_LIU4vHuu1W.json"  background="transparent"  speed="1.5" loop autoplay></lottie-player>
+                            <lottie-player class="animation" src="https://assets3.lottiefiles.com/packages/lf20_LIU4vHuu1W.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
                         </div>
                         <div class="question-content">
 
@@ -243,7 +189,7 @@
                         </div>
                     </div>
 
-                </div> 
+                </div>
             </div>
         </form>
     </section>

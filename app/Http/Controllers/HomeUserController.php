@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Poli;
 use App\Models\Doctor;
+use App\Models\DoctorSchedule;
 
 class HomeUserController extends Controller
 {
@@ -51,15 +52,15 @@ class HomeUserController extends Controller
     public function jadwal($id)
     {
         $doctor = Doctor::findorfail($id);
-        $jadwal = $doctor->schedules->first()->schedule;
-        return dd($jadwal);
+        $jadwal = DoctorSchedule::where('doctor_id', $id)->get();
         return view('user.jadwal', [
             'title' => 'JadwalDokter',
             'doctor' => $doctor,
+            'jadwal' => $jadwal,
             'poli' => DB::table('polis')->get()
         ]);
     }
-    
+
     public function Riwayat()
     {
         return view('user.riwayat', [
