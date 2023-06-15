@@ -98,4 +98,16 @@ btnBatal.addEventListener("click", ()=> {
   modal2.style.display = "none";
 });
 
+// const btnSubmit = document.querySelector('#riwayat');
+// btnSubmit.addEventListener("click", ()=>{
+//     window.location.pathname='/riwayat';
+// });
+
+// document.getElementById('date').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   var form = event.target;
+//   var action = form.getAttribute('action');
+//   window.location.href = action;
+// });
+
   

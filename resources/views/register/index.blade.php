@@ -4,6 +4,13 @@
 <div class="main">
 
     <div class="container">
+        <div class="back-home">
+            <a href="/home">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </a>
+        </div>
+
+
         <h2>Register</h2>
         <p style="margin-top: 15px; text-align:center">Sudah punya akun? <a href="/login"><u>Login</u></a></p>
         <form method="POST" action="{{ route('register.submit') }}" id="signup-form" class="signup-form" enctype="multipart/form-data">

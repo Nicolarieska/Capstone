@@ -600,3 +600,14 @@ a.logout {
     text-decoration: none;
     background-color: #d1d1d1;
 }
+
+@media screen and (max-width: 991px) {
+    .navbar-nav .nav-link {
+        padding: 10px;
+    }
+
+    .user-nav-items {
+        position: relative;
+        left: unset;
+    }
+}

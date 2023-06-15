@@ -5,6 +5,11 @@
 <div class="main">
 
     <div class="container-form">
+        <div class="back-home">
+            <a href="/home">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+            </a>
+        </div>
 
         @if (session()->has('loginError'))
         <div class="alert">
