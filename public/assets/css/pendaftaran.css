@@ -178,6 +178,7 @@ a.text-primary:focus {
 
 .navbar-light .navbar-nav .nav-link {
     color: rgba(110, 128, 122, 0.8);
+    padding: 10px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -190,7 +191,8 @@ a.text-primary:focus {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
     font-weight: 500;
-    color: #00d9a5;
+    background-color: #00d9a5;
+    color: white;
 }
 
 .input-navbar {
@@ -543,4 +545,58 @@ footer a:hover {
         grid-template-columns: auto auto;
         margin-inline: 2em;
     }
+}
+
+.dropdownn {
+    position: relative;
+    padding: 25px 20px;
+}
+
+.user-nav {
+    position: relative;
+}
+
+.user-nav img {
+    height: 2.5em;
+    width: 2.5em;
+    border: 3px var(--primary) solid;
+    border-radius: 100%;
+}
+
+.user-nav-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -100px;
+    right: 0;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px #b5b5b5 solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    transition: all 0.15 ease-in-out;
+}
+
+.hide {
+    display: none;
+}
+
+.user-nav-items a {
+    color: var(--black);
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 2px;
+    transition: all 0.15s ease-in-out;
+}
+
+a.logout {
+    color: #e40101;
+}
+
+.user-nav-items a:hover {
+    color: var(--black);
+    text-decoration: none;
+    background-color: #d1d1d1;
 }

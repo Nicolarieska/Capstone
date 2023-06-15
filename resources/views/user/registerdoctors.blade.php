@@ -50,11 +50,6 @@
                     &#128195; <p>Magang</p>
                   </div>
                 </div>
-
-                <div class="harga">
-                  <p>Bayar di rumah sakit</p>
-                  <h4>Rp 500.000</h4>
-                </div>
               </div>
 
               <div class="btn-pesan">

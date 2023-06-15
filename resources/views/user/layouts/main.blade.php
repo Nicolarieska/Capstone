@@ -10,6 +10,9 @@
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
     <title>GoSakit</title>
+    <link rel="icon" href="{{asset('assets/images/icon.png')}}" type="image">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/maicons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
@@ -18,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/doctor.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/jadwal.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/konfirmasi.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/riwayat.css') }}">
 
 </head>
 
@@ -42,6 +47,7 @@
     <script src="{{ asset('assets/vendor/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/js/theme.js') }}"></script>
     <script src="{{ asset('assets/js/mine.js') }}"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
 

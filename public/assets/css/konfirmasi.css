@@ -1,0 +1,142 @@
+@import url(./theme.css);
+
+.modal-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    z-index: 11;
+}
+
+.container-konfirmasi-big {
+    position: relative;
+    width: 40%;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.modal-title {
+    position: relative;
+    margin-bottom: 38px;
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.modal-title::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    background-color: #d6d6d6;
+}
+
+.container-konfirmasi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.konfirmasi-thumb {
+    margin-inline: auto;
+    object-fit: cover;
+    height: 15em;
+    width: 15em;
+    border-radius: 100%;
+}
+
+.konfirmasi-content {
+    margin-inline: auto;
+}
+
+.konfirmasi-content h1,
+.detail-desc h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.konfirmasi-container-subtitel h3,
+.detail-desc h3 {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cs);
+}
+
+.btns {
+    margin-top: 30px;
+}
+
+/* modal 2 */
+.animation-cont {
+    margin-inline: auto;
+}
+
+.animation {
+    height: 13em;
+    width: 13em;
+}
+
+.question-content {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.konf-text {
+    color: #9f9e9e;
+    margin-inline: 50px;
+}
+
+@media screen and (max-width: 910px) {
+    .container-konfirmasi-big {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .container-konfirmasi-big {
+        width: 55%;
+    }
+
+    .konfirmasi-thumb {
+        height: 10em;
+        width: 10em;
+    }
+
+    .modal-title {
+        font-size: 1.4em;
+    }
+
+    .konfirmasi-content h1,
+    .detail-desc h1,
+    .question {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .container-konfirmasi-big {
+        width: 70%;
+    }
+
+    .animation {
+        height: 9em;
+        width: 9em;
+    }
+}

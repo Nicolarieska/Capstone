@@ -43,11 +43,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/registerpoli">Pendaftaran</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contactuser">kontak</a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- <a class="btn btn-primary ml-lg-3" href="/login">Login / Register</a> -->
+                    <li class="nav-item dropdownn">
+                        <div class="user-nav">
+                            <img src="{{asset('assets/images/your-picture.png')}}" alt="">
+                        </div>
+                        <div class="user-nav-items hide">
+                            <a class="nav-link-drop" href="/contactuser">kontak</a>
+                            <a class="nav-link-drop" href="/riwayat">Riwayat</a>
+                            <a class="nav-link-drop logout" class="logout" href="/home">Logout</a>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -57,4 +57,11 @@ class HomeUserController extends Controller
             'poli' => DB::table('polis')->get()
         ]);
     }
+    
+    public function Riwayat()
+    {
+        return view('user.riwayat', [
+            'title' => 'Riwayat',
+        ]);
+    }
 }

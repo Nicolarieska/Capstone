@@ -10,6 +10,7 @@
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
     <title>GoSakit</title>
+    <link rel="icon" href="{{asset('assets/images/icon.png')}}" type="image">
 
     <link rel="stylesheet" href="{{ asset('assets/css/maicons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
@@ -40,6 +41,7 @@
     <script src="{{ asset('assets/vendor/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/js/theme.js') }}"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="{{ asset('assets/js/mine.js') }}"></script>
 
 </body>
 

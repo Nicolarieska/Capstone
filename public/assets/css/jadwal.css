@@ -1,4 +1,4 @@
-@import url(./pendaftaran.css);
+@import url(./theme.css);
 
 .container-biodata {
     display: flex;
@@ -108,11 +108,13 @@ p.desc {
     font-size: 0.9em;
 }
 
-.radio-container {
+.button-container-ini {
     margin: 0 80px;
+}
+
+.radio-container {
     margin-bottom: 20px;
     display: flex;
-    justify-content: flex-start;
     gap: 20px;
 }
 
@@ -138,7 +140,7 @@ p.desc {
 
 .radio-item > input:checked + label {
     background-color: #daffe8;
-    border: 1px var(--dGreen) solid;
+    outline: 1px var(--dGreen) solid;
 }
 
 .accordion {
@@ -227,6 +229,8 @@ p.desc {
 
 .submit-btn:hover {
     background-color: #006222;
+    text-decoration: none;
+    color: white;
 }
 
 .disabled {
@@ -235,6 +239,61 @@ p.desc {
     pointer-events: none;
 }
 
-.not-allowed-cursor {
-    cursor: not-allowed;
+@media screen and (max-width: 870px) {
+    .container-biodata {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .detail-thumb {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container-biodata,
+    .button-container-ini,
+    .submit-container {
+        margin: 20px 50px;
+    }
+
+    .time-container {
+        margin: 0px 50px;
+        justify-content: center;
+    }
+
+    .radio-container {
+        width: 100%;
+        padding-block: 30px;
+        overflow: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .detail-thumb {
+        height: 15em;
+    }
+
+    .list-detail-title {
+        font-size: 1.5em;
+    }
+
+    .doctor-poli {
+        font-size: 1em;
+    }
+
+    .detail-desc h3,
+    p,
+    .hari,
+    .tanggal,
+    label {
+        font-size: 0.8em;
+    }
+
+    .accordion,
+    .wrap h5 {
+        font-size: 1em;
+    }
 }

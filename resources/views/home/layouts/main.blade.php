@@ -10,6 +10,7 @@
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
     <title>GoSakit</title>
+    <link rel="icon" href="{{asset('assets/images/icon.png')}}" type="image">
 
     <link rel="stylesheet" href="{{ asset('assets/css/maicons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
