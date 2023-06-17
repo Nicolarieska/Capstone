@@ -19,12 +19,12 @@
                         <thead>
                             <tr>
                                 <th class="text-center">ID Jadwal</th>
-                                <th class="text-center" width="200px">Nama Dokter</th>
                                 <th class="text-center" width="200px">Poli</th>
-                                <th class="text-center" width="200px">Waktu</th>
+                                <th class="text-center" width="200px">Nama Dokter</th>
                                 <th class="text-center" width="200px">Hari</th>
                                 <th class="text-center" width="200px">Tanggal</th>
                                 <th class="text-center" width="200px">Jam</th>
+                                <th class="text-center" width="200px">Waktu</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -32,8 +32,11 @@
                             @foreach($schedules as $s)
                             <tr class="text-center">
                                 <td>{{ $s->id }}</td>
-                                <td>{{ $s->doctor->name }}</td>
                                 <td>{{ $s->doctor->poli->name }}</td>
+                                <td>{{ $s->doctor->name }}</td>
+                                <td>{{ $s->day }}</td>
+                                <td>{{ $s->date }}</td>
+                                <td>{{ $s->time }}</td>
                                 <td>
                                     @switch($s->waktu)
                                     @case('Pagi')
@@ -52,9 +55,6 @@
                                     -
                                     @endswitch
                                 </td>
-                                <td>{{ $s->day }}</td>
-                                <td>{{ $s->date }}</td>
-                                <td>{{ $s->time }}</td>
                                 <td></td>
                             </tr>
                             @endforeach

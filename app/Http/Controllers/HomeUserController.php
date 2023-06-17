@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use App\Models\Poli;
 use App\Models\Doctor;
+use Illuminate\Http\Request;
 use App\Models\DoctorSchedule;
+use Illuminate\Support\Facades\DB;
 
 class HomeUserController extends Controller
 {
@@ -53,13 +54,48 @@ class HomeUserController extends Controller
     {
         $doctor = Doctor::findorfail($id);
         $jadwal = DoctorSchedule::where('doctor_id', $id)->get();
+
+        $output = [];
+
+        // Define the custom sorting order for the day names
+        $dayOrder = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+
+        // Define the custom sorting order for the time slots
+        $timeOrder = ['Pagi', 'Siang', 'Sore', 'Malam'];
+
+        foreach ($jadwal as $schedule) {
+            $dayName = $schedule->hari;
+            $timeSlot = $schedule->waktu;
+            $scheduleTime = Carbon::parse($schedule->schedule)->format('H:i');
+
+            if (!isset($output[$dayName][$timeSlot])) {
+                $output[$dayName][$timeSlot] = [];
+            }
+
+            $output[$dayName][$timeSlot][$schedule->id] = [$scheduleTime];
+        }
+
+        // Sort the output array based on the custom sorting orders
+        $output = collect($output)->sortBy(function ($daySchedules, $dayName) use ($dayOrder) {
+            return array_search($dayName, $dayOrder);
+        })->map(function ($daySchedules) use ($timeOrder) {
+            return collect($daySchedules)->sortBy(function ($scheduleTimes, $timeSlot) use ($timeOrder) {
+                return array_search($timeSlot, $timeOrder);
+            })->map(function ($scheduleTimes) {
+                return $scheduleTimes;
+            })->all();
+        })->all();
+
+        // return dd($output);
+
         return view('user.jadwal', [
             'title' => 'JadwalDokter',
             'doctor' => $doctor,
-            'jadwal' => $jadwal,
+            'jadwal' => $output,
             'poli' => DB::table('polis')->get()
         ]);
     }
+
 
     public function Riwayat()
     {

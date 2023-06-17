@@ -25,7 +25,7 @@ class ScheduleController extends Controller
 
     public function scheduleshow()
     {
-        $schedules = DoctorSchedule::with('doctor')->get();
+        $schedules = DoctorSchedule::with('doctor')->where('schedule','>=',date('Y-m-d'))->get();
 
         return view('schedule.indexschedule', [
             'title' => 'Schedule',
@@ -59,7 +59,9 @@ class ScheduleController extends Controller
         $scheduledates = $request->scheduledate;
         // Simpan scheduledate ke dalam tabel schedules
         foreach ($scheduledates as $scheduledate) {
+            Carbon::setLocale('id');
             $now = Carbon::parse($scheduledate);
+            $dayName = $now->isoFormat('dddd');
             $waktu = '';
 
             if ($now->hour >= 0 && $now->hour < 12) {
@@ -74,6 +76,7 @@ class ScheduleController extends Controller
             DoctorSchedule::create([
                 'doctor_id' => $doctorId,
                 'schedule' => $scheduledate,
+                'hari' => $dayName,
                 'waktu' => $waktu
             ]);
         }

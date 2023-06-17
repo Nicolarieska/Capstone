@@ -61,16 +61,16 @@
 
             <div class="button-container-ini wow fadeInRight">
                 <div class="radio-container">
-                    @foreach ($jadwal as $j)
-                    <div class="radio-item">
-                        <input type="radio" id="day-{{ $j->id }}" name="tanggal" value="{{ $j->day.','.$j->date }}" >
-                        <label class="btn-labl" for="day-{{ $j->id }}">
+                    @foreach ($jadwal as $index=>$j)
+                    <div class="radio-item" onclick="view_time('{{ $index }}')">
+                        <input type="radio" id="day" name="tanggal" value="">
+                        <label class="btn-labl" for="day">
                             <div class="jadwal-btn">
                                 <div class="hari">
-                                    {{ $j->day }}
+                                    {{ $index }}
                                 </div>
                                 <div class="tanggal">
-                                    {{ $j->date }}
+
                                 </div>
                             </div>
                         </label>
@@ -79,44 +79,22 @@
                 </div>
             </div>
 
-            <div class="time-container wow fadeInLeft">
+            @foreach ($jadwal as $index=>$j)
+            <div class="time-container wow fadeInLeft" style="display: none;" id="{{ $index }}">
+                @foreach ($j as $waktu=>$jam)
                 <div class="accordion">
-                    Pagi
+                    {{ $waktu }}
                     <div>+</div>
                 </div>
                 <div class="clock-cont">
-                    <input type="radio" id="07.00" name="jam" value="07.00">
-                    <label class="btn-labl clock-item" for="07.00">07.00</label>
-
-                    <input type="radio" id="09.00" name="jam" value="09.00">
-                    <label class="btn-labl clock-item" for="09.00">09.00</label>
+                    @foreach ($jam as $key=>$jm)
+                    <input type="radio" id="{{ $key }}" name="jam" value="{{ $key }}">
+                    <label class="btn-labl clock-item" for="{{ $key }}">{{ $jm[0] }}</label>
+                    @endforeach
                 </div>
-
-                <div class="accordion">
-                    Siang
-                    <div>+</div>
-                </div>
-                <div class="clock-cont">
-                    <input type="radio" id="11.00" name="jam" value="11.00">
-                    <label class="btn-labl clock-item" for="11.00">11.00</label>
-
-                    <input type="radio" id="13.00" name="jam" value="13.00">
-                    <label class="btn-labl clock-item" for="13.00">13.00</label>
-                </div>
-
-                <div class="accordion">
-                    Sore
-                    <div>+</div>
-                </div>
-                <div class="clock-cont">
-                    <input type="radio" id="15.00" name="jam" value="15.00">
-                    <label class="btn-labl clock-item" for="15.00">15.00</label>
-
-                    <input type="radio" id="17.00" name="jam" value="17.00">
-                    <label class="btn-labl clock-item" for="17.00">17.00</label>
-                </div>
+                @endforeach
             </div>
-
+            @endforeach
 
             <div class="submit-container">
                 <div class="wrap">
@@ -194,4 +172,13 @@
         </form>
     </section>
 </main>
+@push('js')
+<script>
+    function view_time(hari) {
+        $('.time-container').hide();
+        $('#' + hari).show();
+        $('#day').val(hari);
+    }
+</script>
+@endpush
 @endsection
