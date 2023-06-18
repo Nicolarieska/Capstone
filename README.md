@@ -1,5 +1,11 @@
 # User
 
+### Login
+![image](https://github.com/Nicolarieska/Capstone/assets/125946457/1126e00c-5908-407e-8ade-c64411201b1c)
+
+Halaman login berfungsi untuk user yang telah mempunyai akun, pada halaman ini user tinggal mengisi email dan password.
+
+
 ### Register
 ![image](https://github.com/Nicolarieska/Capstone/assets/125946457/e65fcb90-04df-44cd-995c-f390fbdd29e9)
 
