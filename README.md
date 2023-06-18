@@ -1,4 +1,4 @@
-# User
+## User
 
 ### Login
 ![image](https://github.com/Nicolarieska/Capstone/assets/90572183/aa44639d-515b-437c-8a83-54de3c4676f4)
@@ -23,7 +23,7 @@ Pada halaman register bagian data pribadi, user diminta untuk mengisi data priba
 Selanjutnya di bagian ini user bisa mengisi nomor rekam medis apabila telah mempunyai nomor rekam medis dengan mendaftar offline dan belum mempunyai akun dan hanya opsional saja pada halaman ini.
 
 
-# Admin
+## Admin
 
 ### Dashboard
 ![image](https://github.com/Nicolarieska/Capstone/assets/90572183/3fd5216e-06a0-4a90-aa75-1055643b6b05)
