@@ -1,7 +1,16 @@
 # GoSakit by C23-M4010
+### Anggota Tim :
+- F015XB453 - Akmal Aliffandhi Anwar
+- F059XB172 - Nicola Arieska Fonda
+- F014XB015 - Jeremy William Siahaan
+- F004XB063 - Fikri Azkia'i Zamzam
 
+### Detail
+- Paket Pembelajaran : Front-end dan Back-end
+- Tema yang dipilih : Kesejahteraan Penduduk
+- Judul Proyek : GoSakit
 
-
+### Setup local
 
 ## User
 
