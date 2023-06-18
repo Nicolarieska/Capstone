@@ -1,3 +1,19 @@
+# User
+
+### Register
+![image](https://github.com/Nicolarieska/Capstone/assets/125946457/e65fcb90-04df-44cd-995c-f390fbdd29e9)
+Halaman register berfungsi untuk user yang belum mempunyai akun, pada halaman ini user diminta untuk mengisi email dan password dalam pembuatan akun.
+
+
+### Data Pribadi
+![image](https://github.com/Nicolarieska/Capstone/assets/125946457/85a52a4c-0b49-49e3-b4d2-9187aeb1fab3)
+Pada halaman register bagian data pribadi, user diminta untuk mengisi data pribadi.
+
+### Nomor Rekam Medis
+![image](https://github.com/Nicolarieska/Capstone/assets/125946457/a809b66d-c127-4e6b-9dcb-2bb43c8bca4c)
+Selanjutnya di bagian ini user bisa mengisi nomor rekam medis apabila telah mempunyai nomor rekam medis dengan mendaftar offline dan belum mempunyai akun dan hanya opsional saja pada halaman ini.
+
+
 # Admin
 
 ### Dashboard
