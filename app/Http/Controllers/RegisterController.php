@@ -24,11 +24,8 @@ class RegisterController extends Controller
         }
 
         //kodingan buat ngasih no rek medis
-        
-        // $medicalRecords = $request->input('medicalrecords');
-        // if (is_null($medicalRecords)) {
-        //     $medicalRecords = "P" . rand(100000, 999999);
-        // }
+
+        $medicalRecords = $request->input('medicalrecords');
 
         // Buat dan simpan data pengguna
         $user = new User;
@@ -40,8 +37,10 @@ class RegisterController extends Controller
         $user->birth = $request->input('birth');
         $user->gender = $request->input('gender');
         $user->phonenumber = $request->input('phonenumber');
-        $user->medicalrecords = $request->input('medicalrecords');
-        // $user->medicalrecords = $medicalRecords;
+        if (is_null($medicalRecords)) {
+            $medicalRecords = "P" . rand(100000, 999999);
+        }
+        $user->medicalRecords = $medicalRecords;
         $user->photo = $photoPath; // Tetapkan null atau path foto tergantung pada keberadaan file foto
         $user->save();
 

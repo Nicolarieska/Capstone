@@ -33,6 +33,11 @@ class User extends Authenticatable
         'verify'
     ];
 
+    public function userschedules()
+    {
+        return $this->hasMany(UserSchedule::class, 'user_id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('doctor_id');
             $table->dateTime('schedule');
+            $table->string('hari');
             $table->enum('waktu', ['Pagi', 'Siang', 'Sore', 'Malam']);
+            $table->enum('status', ['Tersedia', 'Dipesan', 'Selesai']);
             $table->timestamps();
 
             $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');

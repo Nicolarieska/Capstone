@@ -111,6 +111,7 @@
                 searching: false,
                 paging: true,
                 select: false,
+                //info: false,         
                 lengthChange: false
 
             });

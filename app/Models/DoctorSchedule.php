@@ -38,4 +38,9 @@ class DoctorSchedule extends Pivot
     {
         return Carbon::parse($this->schedule)->format('H:i');
     }
+
+    public function userschedule()
+    {
+        return $this->hasOne(UserSchedule::class, 'doctorschedule_id');
+    }
 }
