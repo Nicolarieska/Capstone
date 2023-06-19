@@ -10,7 +10,27 @@
 - Tema yang dipilih : Kesejahteraan Penduduk
 - Judul Proyek : GoSakit
 
-### Setup local
+
+### Setup Local
+
+1. Buka folder Gosakit dengan text editor.
+
+2. Pada terminal install program dengan perintah
+    ```bash
+    php install 
+
+3. Lalu jalankan perintah ini untuk memasang pre rendered database 
+    ```bash
+    php artisan migrate    
+    
+5. Lalu jalankan Seeder untuk mengisi data admin
+    ```bash
+    php  artisan  db:seed  --class=AdminSeeder
+    
+6. Lalu jalankan aplikasi pada terminal dengan command:
+    ```bash
+    php artisan serve
+7. Selamat, Aplikasi telah berjalan di device anda
 
 ## User
 
