@@ -7,6 +7,7 @@ use App\Models\Poli;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 use App\Models\DoctorSchedule;
+use App\Models\UserSchedule;
 use Illuminate\Support\Facades\DB;
 
 class HomeUserController extends Controller
@@ -53,7 +54,18 @@ class HomeUserController extends Controller
     public function jadwal($id)
     {
         $doctor = Doctor::findorfail($id);
-        $jadwal = DoctorSchedule::where('doctor_id', $id)->get();
+        $jadwal = DoctorSchedule::with('doctor')
+            ->where('doctor_id', $id)
+            ->where('schedule', '>=', date('Y-m-d'))
+            ->where('status', 'Tersedia')
+            ->whereNotIn('id', function ($query) {
+                $query->select('doctorschedule_id')
+                    ->from('user_schedules')
+                    ->where('status', 'Dipesan');
+            })
+            ->orderBy('schedule', 'asc')
+            ->get();
+
 
         $output = [];
 
@@ -67,12 +79,16 @@ class HomeUserController extends Controller
             $dayName = $schedule->hari;
             $timeSlot = $schedule->waktu;
             $scheduleTime = Carbon::parse($schedule->schedule)->format('H:i');
+            $scheduleDate = Carbon::parse($schedule->schedule)->isoFormat('D MMMM YYYY');
 
             if (!isset($output[$dayName][$timeSlot])) {
                 $output[$dayName][$timeSlot] = [];
             }
 
-            $output[$dayName][$timeSlot][$schedule->id] = [$scheduleTime];
+            $output[$dayName][$timeSlot][$schedule->id] = [
+                'time' => $scheduleTime,
+                'date' => $scheduleDate
+            ];
         }
 
         // Sort the output array based on the custom sorting orders
@@ -86,8 +102,6 @@ class HomeUserController extends Controller
             })->all();
         })->all();
 
-        // return dd($output);
-
         return view('user.jadwal', [
             'title' => 'JadwalDokter',
             'doctor' => $doctor,
@@ -96,11 +110,18 @@ class HomeUserController extends Controller
         ]);
     }
 
-
     public function Riwayat()
     {
+        $userSchedules = UserSchedule::with('doctorschedule')->get();
+        foreach ($userSchedules as $userSchedule) {
+            $userSchedule->doctorSchedule->formattedScheduleDate = Carbon::parse($userSchedule->doctorSchedule->schedule)->isoFormat('DD MMMM YYYY');
+            $userSchedule->doctorSchedule->formattedScheduleDay = Carbon::parse($userSchedule->doctorSchedule->schedule)->isoFormat('dddd');
+            $userSchedule->doctorSchedule->formattedScheduleTime = Carbon::parse($userSchedule->doctorSchedule->schedule)->format('H:i') . ' WIB';
+        }
         return view('user.riwayat', [
             'title' => 'Riwayat',
+            'userSchedules' => $userSchedules,
+            'poli' => DB::table('polis')->get()
         ]);
     }
 }

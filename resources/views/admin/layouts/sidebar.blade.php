@@ -43,8 +43,9 @@
                     <span class="nav-text">Data Jadwal</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="/indexpoli">Buat Jadwal</a></li>
-                    <li><a href="/scheduleshow">Lihat Jadwal Dokter</a></li>
+                    <li><a href="/indexpoli">Tambah Jadwal</a></li>
+                    <li><a href="/available">Lihat Jadwal Tersedia</a></li>
+                    <li><a href="/booked">Lihat Jadwal Dipesan</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -52,8 +53,7 @@
                     <span class="nav-text">Riwayat Jadwal</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                    <li><a href="table-datatable-basic.html">Datatable</a></li>
+                    <li><a href="/complete">Lihat Jadwal Selesai</a></li>
                 </ul>
             </li>
         </ul>

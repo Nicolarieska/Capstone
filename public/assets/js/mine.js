@@ -53,12 +53,19 @@ const displaySelectedContent = () => {
   const printJam = document.querySelector('.konfirmasi-jam');
 
   if (selectedTanggal && selectedJam) {
-    textConf.innerHTML = `${selectedTanggal.value}, ${selectedJam.value} WIB`;
+    textConf.innerHTML = `${selectedTanggal.nextElementSibling.textContent}, ${selectedJam.nextElementSibling.textContent} WIB`;
     //printing modal
-    printTanggal.innerHTML = `${selectedTanggal.value}`;
-    printJam.innerHTML = `${selectedJam.value} WIB`;
+    printTanggal.innerHTML = `${selectedTanggal.nextElementSibling.textContent}`;
+    printJam.innerHTML = `${selectedJam.nextElementSibling.textContent} WIB`;
 
     btn.classList.remove('disabled');
+  } else {
+    textConf.innerHTML = "";
+    //printing modal
+    printTanggal.innerHTML = "";
+    printJam.innerHTML = "";
+
+    btn.classList.add('disabled');
   }
 
 };
@@ -98,16 +105,5 @@ btnBatal.addEventListener("click", () => {
   modal2.style.display = "none";
 });
 
-// const btnSubmit = document.querySelector('#riwayat');
-// btnSubmit.addEventListener("click", ()=>{
-//     window.location.pathname='/riwayat';
-// });
-
-// document.getElementById('date').addEventListener('submit', function(event) {
-//   event.preventDefault();
-//   var form = event.target;
-//   var action = form.getAttribute('action');
-//   window.location.href = action;
-// });
 
 

@@ -46,9 +46,9 @@
                 </div>
                 <div class="detail-desc">
                     <h3 tabindex="0" class="desc-title">Description:</h3>
-                    <p tabindex="0" id="desc">dr. Ackni Hartati, Sp.A, M.Kes adalah Dokter Spesialis Anak yang aktif melayani pasien di RS Permata Bekasi, RS EMC Pekayon, dan Primaya Hospital Bekasi Timur. dr. Ackni Hartati, Sp.A, M.Kes mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Padjadjaran.
-                        Beliau tergabung dalam Ikatan Dokter Anak Indonesia (IDAI) dan Ikatan Dokter Indonesia (IDI) dapat memberikan layanan konsultasi seputar tumbuh dan kembang anak.
-                        Harga yang tertera merupakan biaya konsultasi dokter, belum termasuk tindakan lain dan biaya admin dari RS/Klinik (apabila ada).</p>
+                    <p tabindex="0" id="desc">dr. {{ $doctor->name }} adalah Dokter Spesialis yang aktif melayani pasien di RS Go Sakit. dr. {{ $doctor->name }} mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Indonesia.
+                        Beliau tergabung dalam Ikatan Dokter Anak Indonesia (IDAI) dan Ikatan Dokter Indonesia (IDI) dapat memberikan layanan konsultasi seputar penyakit anda.
+                        Segera dapatkan antrian pada dr. {{ $doctor->name }} dengan memilih jadwal dibawah ini yang tersedia.</p>
                 </div>
             </div>
         </div>
@@ -57,20 +57,33 @@
             <h1 class="subtitle-jadwal" tabindex="0">Pilih Waktu Kunjungan</h1>
         </div>
 
-        <form action="" id="date" method="post">
-
+        <form method="POST" action="{{ route('userschedulepost') }}" enctype="multipart/form-data">
+            @csrf
             <div class="button-container-ini wow fadeInRight">
                 <div class="radio-container">
-                    @foreach ($jadwal as $index=>$j)
-                    <div class="radio-item" onclick="view_time('{{ $index }}')">
-                        <input type="radio" id="day" name="tanggal" value="">
-                        <label class="btn-labl" for="day">
+                    <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                    @foreach ($jadwal as $index => $j)
+                    <div class="radio-item" onclick="view_time('#{{ $index }}')">
+                        <input type="radio" id="hari-{{ $index }}" name="tanggal" value="{{ $index }}">
+                        <label class="btn-labl" for="hari-{{ $index }}">
                             <div class="jadwal-btn">
                                 <div class="hari">
                                     {{ $index }}
                                 </div>
                                 <div class="tanggal">
-
+                                    @php
+                                    $firstDate = true;
+                                    @endphp
+                                    @foreach ($j as $waktu => $jam)
+                                    @foreach ($jam as $key => $jm)
+                                    @if ($firstDate)
+                                    <div>{{ $jm['date'] }}</div>
+                                    @php
+                                    $firstDate = false;
+                                    @endphp
+                                    @endif
+                                    @endforeach
+                                    @endforeach
                                 </div>
                             </div>
                         </label>
@@ -79,17 +92,17 @@
                 </div>
             </div>
 
-            @foreach ($jadwal as $index=>$j)
-            <div class="time-container wow fadeInLeft" style="display: none;" id="{{ $index }}">
-                @foreach ($j as $waktu=>$jam)
+            @foreach ($jadwal as $index => $j)
+            <div class="time-container section_jam {{ $index != 'Senin' ? 'd-none' : '' }}" id="{{ $index }}">
+                @foreach ($j as $waktu => $jam)
                 <div class="accordion">
                     {{ $waktu }}
                     <div>+</div>
                 </div>
                 <div class="clock-cont">
-                    @foreach ($jam as $key=>$jm)
-                    <input type="radio" id="{{ $key }}" name="jam" value="{{ $key }}">
-                    <label class="btn-labl clock-item" for="{{ $key }}">{{ $jm[0] }}</label>
+                    @foreach ($jam as $key => $jm)
+                    <input type="radio" id="{{ $key }}" name="jam">
+                    <label class="btn-labl clock-item" for="{{ $key }}">{{ $jm['time'] }}</label>
                     @endforeach
                 </div>
                 @endforeach
@@ -175,9 +188,13 @@
 @push('js')
 <script>
     function view_time(hari) {
-        $('.time-container').hide();
-        $('#' + hari).show();
-        $('#day').val(hari);
+        var sectionJam = document.querySelectorAll('.section_jam');
+        sectionJam.forEach(function(element) {
+            element.classList.add('d-none');
+        });
+
+        var selectedHari = document.querySelector(hari);
+        selectedHari.classList.remove('d-none');
     }
 </script>
 @endpush

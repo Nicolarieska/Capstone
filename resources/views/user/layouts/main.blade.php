@@ -49,6 +49,7 @@
     <script src="{{ asset('assets/js/mine.js') }}"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    @stack('js')
 </body>
 
 </html>
