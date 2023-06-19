@@ -36,6 +36,34 @@ Pada halaman register bagian data pribadi, user diminta untuk mengisi data priba
 
 Selanjutnya di bagian ini user bisa mengisi nomor rekam medis apabila telah mempunyai nomor rekam medis dengan mendaftar offline dan belum mempunyai akun dan hanya opsional saja pada halaman ini.
 
+### Dashboard (after login)
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/4892ab23-07dc-4068-a060-8270b0f3be0b)
+
+Setelah login anda akan dihadapkan dengan tampilan seperti ini,setelah itu tekan tombol pendaftaran pada navbar
+
+### Halaman Pendaftaran
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/fa5f6cce-f1bd-483c-b20b-1797ee97d6c3)
+
+Halaman ini berfungsi sebagai sarana pemilihan POLI yang telah di sediakan
+### Daftar Dokter
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/b82ed14f-515b-4098-ad0b-adf18be6028e)
+
+Setelah memilih Poli user diharuskan untuk memilih dokter yang ingin mereka temui
+
+### Detail Halaman Dokter
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/69e1c770-a0ec-438d-bafa-00697dcb6efd)
+
+Halaman ini berisi biografi singkat beserta beberapa pilihan jadwal yang telah disediakan. Pilih salah satu jadwal untuk melakukan reservasi
+
+### Konfirmasi Akhir
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/a4127f50-7716-4fd9-8403-1530d41262bd)
+
+Halaman ini berfungsi sebagai halaman konfirmasi akhir sebelum user membuat sebuah reservasi
+
+### Halaman Riwayat
+![image](https://github.com/Nicolarieska/Capstone/assets/80694693/aa294231-cd49-418c-ab4a-e16cb18922e7)
+
+Setiap reservasi yang telah user pilih akan tampil di halaman ini
 
 ## Admin
 
