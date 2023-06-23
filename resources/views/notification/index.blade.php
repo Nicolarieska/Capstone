@@ -9,7 +9,7 @@
             <br>
             <span class="subhead">Cek pesan whatsapp secara berkala untuk informasi lebih lanjut</span>
             <br> <br>
-            <a href="/home" class="btn btn-primary">Home</a>
+            <a href="/" class="btn btn-primary">Home</a>
         </div>
     </div>
 </div>

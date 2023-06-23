@@ -5,8 +5,8 @@
 
     <div class="container">
         <div class="back-home">
-            <a href="/home">
-                <span class="material-symbols-outlined">arrow_back_ios</span>
+            <a href="/">
+                <span class="material-symbols-outlined"></span>
             </a>
         </div>
 

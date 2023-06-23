@@ -26,7 +26,7 @@ use App\Http\Controllers\UserScheduleController;
 */
 
 // Landing Page
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/doctors', [HomeController::class, 'doctors']);
 Route::get('/contact', [HomeController::class, 'contact']);
@@ -68,6 +68,8 @@ Route::get('/contactuser', [HomeUserController::class, 'contact'])->middleware('
 Route::get('/registerpoli', [HomeUserController::class, 'registerpoli'])->middleware('auth:web');
 Route::get('/registerdoctors/{id}', [HomeUserController::class, 'registerdoctors'])->middleware('auth:web');
 Route::get('/jadwal/{id}', [HomeUserController::class, 'jadwal'])->middleware('auth:web');
+Route::post('/userschedulepost', [UserScheduleController::class, 'store'])->name('userschedulepost')->middleware('auth:admin');
+Route::put('/complete/{id}', [UserScheduleController::class, 'completeform']);
 Route::get('/riwayat', [HomeUserController::class, 'riwayat'])->middleware('auth:web');
 
 // Dashboard -> Dokter
@@ -92,7 +94,5 @@ Route::get('/indexdoctor/{id}', [ScheduleController::class, 'indexdoctor'])->mid
 Route::get('/scheduleform/{id}', [ScheduleController::class, 'scheduleform'])->middleware('auth:admin');
 Route::post('/schedulepost', [ScheduleController::class, 'store'])->name('schedulepost')->middleware('auth:admin');
 
-Route::post('/userschedulepost', [UserScheduleController::class, 'store'])->name('userschedulepost')->middleware('auth:admin');
 
-Route::put('/complete/{id}', [UserScheduleController::class, 'completeform']);
 
