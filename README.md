@@ -11,26 +11,37 @@
 - Judul Proyek : GoSakit
 
 
-### Setup Local
+### Setup Project
 
-1. Buka folder Gosakit dengan text editor.
+1. Pastikan sudah tersedia XAMPP dan Composer pada perangkat anda
 
-2. Pada terminal install program dengan perintah
-    ```bash
+2. Unduh project atau copy dari github 
+
+3. Buka project yang sudah ada dengan Visual Studio Code pada perangkat lalu inisiasi Composer pada project dengan masuk ke terminal dan ketik perintah 
+ ```bash
+    composer install
+
+4. Lakukan generate file .env pada terminal dengan perintah 
+```bash
     php install 
 
-3. Lalu jalankan perintah ini untuk memasang pre rendered database 
-    ```bash
-    php artisan migrate    
-    
-5. Lalu jalankan Seeder untuk mengisi data admin
-    ```bash
-    php  artisan  db:seed  --class=AdminSeeder
-    
-6. Lalu jalankan aplikasi pada terminal dengan command:
-    ```bash
+5. Buka XAMPP dan aktifkan apache dan MySQL serta buat database baru pada phpmyadmin yang disesuaikan dengan nama database di file .env
+
+6. Lakukan migrasi database pada terminal dengan mengetikkan perintah 
+ ```bash
+    php artisan migrate
+
+7. Jalankan data seeder admin agar dapat login sebagai admin nantinya dengan mengetik perintah pada terminal
+```bash
+    db:seed --class=AdminSeeder
+
+8. Run project dengan mengetik pada terminal perintah
+ ```bash
     php artisan serve
-7. Selamat, Aplikasi telah berjalan di device anda
+
+9. Buka browser dan kunjungi halaman website http://127.0.0.1:8000 
+
+10. Jika ingin melihat akun admin agar dapat login sebagai admin, dapat mengunjungi folder app-> database->seeders->AdminSeeder.php. Dan jika ingin melakukan CRUD, bisa langsung pada halaman dashboard admin setelah login sebagai admin 
 
 ## User
 
