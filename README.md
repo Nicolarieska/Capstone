@@ -18,25 +18,25 @@
 2. Unduh project atau copy dari github 
 
 3. Buka project yang sudah ada dengan Visual Studio Code pada perangkat lalu inisiasi Composer pada project dengan masuk ke terminal dan ketik perintah 
- ```bash
+     ```bash
     composer install
 
 4. Lakukan generate file .env pada terminal dengan perintah 
-```bash
+    ```bash
     php install 
 
 5. Buka XAMPP dan aktifkan apache dan MySQL serta buat database baru pada phpmyadmin yang disesuaikan dengan nama database di file .env
 
 6. Lakukan migrasi database pada terminal dengan mengetikkan perintah 
- ```bash
+     ```bash
     php artisan migrate
 
 7. Jalankan data seeder admin agar dapat login sebagai admin nantinya dengan mengetik perintah pada terminal
-```bash
+    ```bash
     db:seed --class=AdminSeeder
 
 8. Run project dengan mengetik pada terminal perintah
- ```bash
+   ```bash
     php artisan serve
 
 9. Buka browser dan kunjungi halaman website http://127.0.0.1:8000 
