@@ -6,7 +6,7 @@
     <div class="container">
         <div class="back-home">
             <a href="/">
-                <span class="material-symbols-outlined"></span>
+                <span class="material-symbols-outlined">Back</span>
             </a>
         </div>
 
