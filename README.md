@@ -40,7 +40,7 @@
    ```bash
     php artisan serve
 
-9. Buka browser dan kunjungi halaman website http://127.0.0.1:8000 
+9. Buka browser dan kunjungi halaman website http://127.0.0.1:8000/home 
 
 10. Jika ingin melihat akun admin agar dapat login sebagai admin, dapat mengunjungi folder app-> database->seeders->AdminSeeder.php. Dan jika ingin melakukan CRUD, bisa langsung pada halaman dashboard admin setelah login sebagai admin 
 
