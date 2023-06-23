@@ -23,7 +23,8 @@
 
 4. Lakukan generate file .env pada terminal dengan perintah 
     ```bash
-    php install 
+    cp .env.example .env
+    php artisan key:generate
 
 5. Buka XAMPP dan aktifkan apache dan MySQL serta buat database baru pada phpmyadmin yang disesuaikan dengan nama database di file .env
 
