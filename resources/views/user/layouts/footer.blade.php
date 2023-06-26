@@ -47,7 +47,7 @@
                 <h5>Contact</h5>
                 <p class="footer-link mt-2">Jl. Batik Kumeli No.50, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123</p>
                 <a href="#" class="footer-link">+62 895 412 308 117</a>
-                <a href="#" class="footer-link">GoSakit@gmail.com</a>
+                <a href="#" class="footer-link">Gosakit@gmail.com</a>
 
                 <h5 class="mt-3">Social Media</h5>
                 <div class="footer-sosmed mt-3">
@@ -55,7 +55,7 @@
                     <a href="https://www.linkedin.com/in/jeremy-william-siahaan-67906021b/" target="_blank"><span class="mai-logo-linkedin"></span></a>
                     <a href="https://www.linkedin.com/in/nicola-arieska-fonda/" target="_blank"><span class="mai-logo-linkedin"></span></a>
                     <a href="https://www.linkedin.com/in/fikri-azkia-i-zamzam-32b5471b7/" target="_blank"><span class="mai-logo-linkedin"></span></a>
-                    <a href="https://www.linkedin.com/in/akmalaa/" target="_blank"><span class="mai-logo-github"></span></a>
+                    <a href="https://github.com/Nicolarieska/Capstone" target="_blank"><span class="mai-logo-github"></span></a>
                 </div>
             </div>
         </div>

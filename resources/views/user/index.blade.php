@@ -4,9 +4,9 @@
 <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
         <div class="container text-center wow zoomIn">
-            <span class="subhead">Let's make your life happier</span>
-            <h1 class="display-4">Hidup Sehat</h1>
-            <a href="/login" class="btn btn-primary">MARI SEHAT</a>
+            <span class="subhead">TERIMA KASIH ATAS KUNJUNGAN ANDA</span>
+            <h1 class="display-4">WEBSITE GOSAKIT</h1>
+            <a href="/registerpoli" class="btn btn-primary">Ambil Antrian</a>
         </div>
     </div>
 </div>

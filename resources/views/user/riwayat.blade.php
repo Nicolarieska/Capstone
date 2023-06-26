@@ -13,7 +13,7 @@
         </button>
     </div>
     @endif
-    
+
     <div class="title-container">
         <h1>Riwayat</h1>
     </div>

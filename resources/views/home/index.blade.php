@@ -5,7 +5,7 @@
   <div class="hero-section">
     <div class="container text-center wow zoomIn">
       <span class="subhead">Let's make your life happier</span>
-      <h1 class="display-4">Hidup Sehat</h1>
+      <h1 class="display-4">GO SAKIT</h1>
       <a href="/login" class="btn btn-primary">MARI SEHAT</a>
     </div>
   </div>
@@ -48,8 +48,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6 py-3 wow fadeInUp">
           <h1>Selamat datang di Pusat Kesehatan Anda</h1>
-                    <p class="about">Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.
-                    </p>
+          <p class="about">Mereka memiliki tim dokter yang berpengalaman yang siap memberikan konsultasi dan solusi yang tepat untuk masalah kesehatan Anda. Mereka berkomitmen untuk memberikan pengalaman konsultasi yang terpercaya dan nyaman, dengan mendengarkan dengan seksama dan merespon setiap pertanyaan atau kekhawatiran Anda dengan hangat dan profesional.
+          </p>
           <a href="/about" class="btn btn-primary">Selengkapnya</a>
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="back-home">
             <a href="/">
-                <span class="material-symbols-outlined">Back</span>
+                <span class="material-symbols-outlined">arrow_back_ios</span>
             </a>
         </div>
 
