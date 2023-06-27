@@ -38,12 +38,14 @@
 
 .card-doctor .btn-pesan {
     position: relative;
-    text-align: center;
     font-size: 1em;
+    text-align: center;
     border-radius: 3px;
-    padding: 5px 20px;
+    margin-top: 10px;
+    padding: 5px;
     cursor: pointer;
     font-weight: 500;
+    width: 50%;
     color: var(--dGreen);
     text-decoration: underline;
     transition: all 0.25s ease-in-out;
@@ -64,12 +66,12 @@
     z-index: -1;
 }
 
-.btn-pesan:hover {
+.card-doctor:hover .btn-pesan {
     color: white;
     text-decoration: none;
 }
 
-.btn-pesan:hover:after {
+.card-doctor:hover .btn-pesan:after {
     transform: scaleX(1);
 }
 

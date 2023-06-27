@@ -50,10 +50,9 @@
                     &#128195; <p>Magang</p>
                   </div>
                 </div>
-              </div>
-
-              <div class="btn-pesan">
-                Buat janji
+                <div class="btn-pesan">
+                    Buat janji
+                </div>
               </div>
             </div>
           </div>
